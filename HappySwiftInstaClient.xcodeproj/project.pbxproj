@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E98A50351DCBDAAE0077A5A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */; };
+		E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50361DCBDAAE0077A5A9 /* ViewController.swift */; };
+		E98A503A1DCBDAAE0077A5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A50381DCBDAAE0077A5A9 /* Main.storyboard */; };
+		E98A503C1DCBDAAE0077A5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98A503B1DCBDAAE0077A5A9 /* Assets.xcassets */; };
+		E98A503F1DCBDAAE0077A5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */; };
+		E98A504A1DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E98A50461DCBDAAE0077A5A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E98A50291DCBDAAD0077A5A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E98A50301DCBDAAD0077A5A9;
+			remoteInfo = HappySwiftInstaClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E98A50311DCBDAAE0077A5A9 /* HappySwiftInstaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappySwiftInstaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E98A50361DCBDAAE0077A5A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E98A50391DCBDAAE0077A5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E98A503B1DCBDAAE0077A5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E98A503E1DCBDAAE0077A5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E98A50401DCBDAAE0077A5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E98A50451DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappySwiftInstaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappySwiftInstaClientTests.swift; sourceTree = "<group>"; };
+		E98A504B1DCBDAAE0077A5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E98A502E1DCBDAAD0077A5A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98A50421DCBDAAE0077A5A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E98A50281DCBDAAD0077A5A9 = {
+			isa = PBXGroup;
+			children = (
+				E98A50331DCBDAAE0077A5A9 /* HappySwiftInstaClient */,
+				E98A50481DCBDAAE0077A5A9 /* HappySwiftInstaClientTests */,
+				E98A50321DCBDAAE0077A5A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E98A50321DCBDAAE0077A5A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E98A50311DCBDAAE0077A5A9 /* HappySwiftInstaClient.app */,
+				E98A50451DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E98A50331DCBDAAE0077A5A9 /* HappySwiftInstaClient */ = {
+			isa = PBXGroup;
+			children = (
+				E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */,
+				E98A50361DCBDAAE0077A5A9 /* ViewController.swift */,
+				E98A50381DCBDAAE0077A5A9 /* Main.storyboard */,
+				E98A503B1DCBDAAE0077A5A9 /* Assets.xcassets */,
+				E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */,
+				E98A50401DCBDAAE0077A5A9 /* Info.plist */,
+			);
+			path = HappySwiftInstaClient;
+			sourceTree = "<group>";
+		};
+		E98A50481DCBDAAE0077A5A9 /* HappySwiftInstaClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */,
+				E98A504B1DCBDAAE0077A5A9 /* Info.plist */,
+			);
+			path = HappySwiftInstaClientTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E98A50301DCBDAAD0077A5A9 /* HappySwiftInstaClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E98A504E1DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClient" */;
+			buildPhases = (
+				E98A502D1DCBDAAD0077A5A9 /* Sources */,
+				E98A502E1DCBDAAD0077A5A9 /* Frameworks */,
+				E98A502F1DCBDAAD0077A5A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappySwiftInstaClient;
+			productName = HappySwiftInstaClient;
+			productReference = E98A50311DCBDAAE0077A5A9 /* HappySwiftInstaClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E98A50441DCBDAAE0077A5A9 /* HappySwiftInstaClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E98A50511DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClientTests" */;
+			buildPhases = (
+				E98A50411DCBDAAE0077A5A9 /* Sources */,
+				E98A50421DCBDAAE0077A5A9 /* Frameworks */,
+				E98A50431DCBDAAE0077A5A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E98A50471DCBDAAE0077A5A9 /* PBXTargetDependency */,
+			);
+			name = HappySwiftInstaClientTests;
+			productName = HappySwiftInstaClientTests;
+			productReference = E98A50451DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E98A50291DCBDAAD0077A5A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = pavel;
+				TargetAttributes = {
+					E98A50301DCBDAAD0077A5A9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					E98A50441DCBDAAE0077A5A9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E98A50301DCBDAAD0077A5A9;
+					};
+				};
+			};
+			buildConfigurationList = E98A502C1DCBDAAD0077A5A9 /* Build configuration list for PBXProject "HappySwiftInstaClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E98A50281DCBDAAD0077A5A9;
+			productRefGroup = E98A50321DCBDAAE0077A5A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E98A50301DCBDAAD0077A5A9 /* HappySwiftInstaClient */,
+				E98A50441DCBDAAE0077A5A9 /* HappySwiftInstaClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E98A502F1DCBDAAD0077A5A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98A503F1DCBDAAE0077A5A9 /* LaunchScreen.storyboard in Resources */,
+				E98A503C1DCBDAAE0077A5A9 /* Assets.xcassets in Resources */,
+				E98A503A1DCBDAAE0077A5A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98A50431DCBDAAE0077A5A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E98A502D1DCBDAAD0077A5A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */,
+				E98A50351DCBDAAE0077A5A9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98A50411DCBDAAE0077A5A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98A504A1DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E98A50471DCBDAAE0077A5A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E98A50301DCBDAAD0077A5A9 /* HappySwiftInstaClient */;
+			targetProxy = E98A50461DCBDAAE0077A5A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E98A50381DCBDAAE0077A5A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E98A50391DCBDAAE0077A5A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E98A503E1DCBDAAE0077A5A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E98A504C1DCBDAAE0077A5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E98A504D1DCBDAAE0077A5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E98A504F1DCBDAAE0077A5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HappySwiftInstaClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.HappySwiftInstaClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E98A50501DCBDAAE0077A5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HappySwiftInstaClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.HappySwiftInstaClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E98A50521DCBDAAE0077A5A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HappySwiftInstaClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.HappySwiftInstaClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappySwiftInstaClient.app/HappySwiftInstaClient";
+			};
+			name = Debug;
+		};
+		E98A50531DCBDAAE0077A5A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HappySwiftInstaClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.HappySwiftInstaClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappySwiftInstaClient.app/HappySwiftInstaClient";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E98A502C1DCBDAAD0077A5A9 /* Build configuration list for PBXProject "HappySwiftInstaClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98A504C1DCBDAAE0077A5A9 /* Debug */,
+				E98A504D1DCBDAAE0077A5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E98A504E1DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98A504F1DCBDAAE0077A5A9 /* Debug */,
+				E98A50501DCBDAAE0077A5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E98A50511DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98A50521DCBDAAE0077A5A9 /* Debug */,
+				E98A50531DCBDAAE0077A5A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E98A50291DCBDAAD0077A5A9 /* Project object */;
+}
