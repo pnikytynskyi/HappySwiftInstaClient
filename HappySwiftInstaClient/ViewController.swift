@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Haneke
+import Alamofire
 
+let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
 class ViewController: UIViewController, UITableViewDataSource {
 
 
@@ -15,15 +19,24 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.borderColor()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.loadProvectusPics()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+    func loadProvectusPics() {
+
+       let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
+        Alamofire.request(url, method: .get).responseJSON{ response in
+            
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.results?.count ?? 0
     }
