@@ -8,9 +8,13 @@
 
 import UIKit
 
+
 class ModalViewController: UIViewController {
 
     @IBOutlet weak var SomeImg: UIImageView!
+    
+    @IBOutlet weak var DateOfCreation: UILabel!
+    @IBOutlet weak var OwnerData: UILabel!
     var recipeImageName = String()
     var recipeInfo: [String:AnyObject]? {
         didSet {
@@ -20,13 +24,10 @@ class ModalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.SomeImg.image = UIImage( contentsOfFile:self.recipeImageName)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setupImage(){
@@ -39,7 +40,7 @@ class ModalViewController: UIViewController {
         }
         
         let url = NSURL(string: urlThumbString)
-        print("And url is: \(url)")
+        print("And the url is: \(url)")
         self.SomeImg.hnk_setImageFromURL(url as! URL )
 
     }

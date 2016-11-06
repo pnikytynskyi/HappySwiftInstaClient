@@ -18,7 +18,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     func setupItems(){
         guard let allImgs = self.ItemsRow["images"] as? [String: AnyObject],
-            let thumbImg = allImgs["standard_resolution"] as? [String: AnyObject],
+            let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],
             let urlThumbString = thumbImg["url"] as? String
             else {
                 print("Fatality fail")
@@ -29,6 +29,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         let url = NSURL(string: urlThumbString)
         self.captionLabel.text = "Tap for details."
         self.provectusImageView.hnk_setImageFromURL(url as! URL)
+        
     }
     
 

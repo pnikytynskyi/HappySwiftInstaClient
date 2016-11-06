@@ -64,7 +64,7 @@
                                 <connections>
                                     <outlet property="captionLabel" destination="8D9-HD-csq" id="BPR-ug-juF"/>
                                     <outlet property="provectusImageView" destination="FwR-hc-ifF" id="BYu-5E-Psh"/>
-                                    <segue destination="Uzq-kq-qlU" kind="presentation" identifier="showRecipePhoto" id="51i-vj-VYz"/>
+                                    <segue destination="Uzq-kq-qlU" kind="show" identifier="showRecipePhoto" id="LKd-uo-NEs"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -95,8 +95,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jp2-Sh-pkk">
-                                <frame key="frameInset" minX="54" minY="182" width="240" height="128"/>
+                                <frame key="frameInset" minX="27" minY="149" width="320" height="200"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlx-aT-3k6">
+                                <frame key="frameInset" minX="27" minY="219" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w17-aj-B8A">
+                                <frame key="frameInset" minX="27" minY="300" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -109,38 +123,40 @@
                     <navigationItem key="navigationItem" id="HeD-w6-cEo">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Hgq-Y9-Mgw">
                             <connections>
-                                <segue destination="Car-VT-AXi" kind="show" id="wLq-Fg-iEN"/>
+                                <segue destination="Car-VT-AXi" kind="show" id="l7v-qb-siY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="DateOfCreation" destination="rlx-aT-3k6" id="edp-V6-VHp"/>
+                        <outlet property="OwnerData" destination="w17-aj-B8A" id="M3L-wP-igY"/>
                         <outlet property="SomeImg" destination="Jp2-Sh-pkk" id="9uI-08-OCZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdw-Bc-IdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="30"/>
+            <point key="canvasLocation" x="12" y="30"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="1oY-Gf-XVk">
+        <scene sceneID="YkM-YP-BPP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K9E-TQ-bk1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="70I-N6-lBq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V7k-Ed-fIc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H4r-bS-Gxm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Uzq-kq-qlU" kind="relationship" relationship="rootViewController" id="A90-SE-wKN"/>
+                        <segue destination="Uzq-kq-qlU" kind="relationship" relationship="rootViewController" id="9nG-tC-lcK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4fr-Sd-WIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suR-cs-7cV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="-622"/>
+            <point key="canvasLocation" x="-119" y="-817"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="51i-vj-VYz"/>
+        <segue reference="LKd-uo-NEs"/>
     </inferredMetricsTieBreakers>
 </document>

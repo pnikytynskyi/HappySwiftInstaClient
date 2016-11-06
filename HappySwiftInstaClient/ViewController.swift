@@ -8,13 +8,11 @@
 
 import UIKit
 import SwiftyJSON
-import Haneke
 import Alamofire
-
+import Haneke
 let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
+
 class ViewController: UICollectionViewController {
-
-
     var results: [AnyObject]? = []
     @IBOutlet var collection_View: UICollectionView!
     
