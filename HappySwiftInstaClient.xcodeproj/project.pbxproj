@@ -16,7 +16,7 @@
 		E98A503F1DCBDAAE0077A5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */; };
 		E98A504A1DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */; };
 		E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */; };
-		E99C708F1DCF51F9001C751D /* SinglePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C708E1DCF51F9001C751D /* SinglePhotoViewController.swift */; };
+		E9F16EED1DCFBD8F008DCFCA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappySwiftInstaClientTests.swift; sourceTree = "<group>"; };
 		E98A504B1DCBDAAE0077A5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		E99C708E1DCF51F9001C751D /* SinglePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SinglePhotoViewController.swift; path = ../SinglePhotoViewController.swift; sourceTree = "<group>"; };
+		E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		FBEE4D6EB2571D7DA6609CDF /* Pods-HappySwiftInstaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,10 +113,10 @@
 		E98A50331DCBDAAE0077A5A9 /* HappySwiftInstaClient */ = {
 			isa = PBXGroup;
 			children = (
-				E99C708E1DCF51F9001C751D /* SinglePhotoViewController.swift */,
 				E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */,
 				E98A50361DCBDAAE0077A5A9 /* ViewController.swift */,
 				E98A50381DCBDAAE0077A5A9 /* Main.storyboard */,
+				E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */,
 				E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */,
 				E98A503B1DCBDAAE0077A5A9 /* Assets.xcassets */,
 				E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */,
@@ -336,8 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F16EED1DCFBD8F008DCFCA /* ModalViewController.swift in Sources */,
 				E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */,
-				E99C708F1DCF51F9001C751D /* SinglePhotoViewController.swift in Sources */,
 				E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */,
 				E98A50351DCBDAAE0077A5A9 /* AppDelegate.swift in Sources */,
 			);

@@ -11,15 +11,13 @@ import UIKit
 class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var captionLabel: UILabel!
     @IBOutlet var provectusImageView: UIImageView!
-    var ProvectusRow: [String: AnyObject]! {
+    var ItemsRow: [String: AnyObject]! {
         didSet {
-            self.setupProvectus()
+            self.setupItems()
         }
     }
-    func setupProvectus(){
-        //        var parse = self.ProvectusRow?["caption"] as! [String]
-        //        self.captionLabel.text = parse["text"] as String in
-        guard let allImgs = self.ProvectusRow["images"] as? [String: AnyObject],
+    func setupItems(){
+        guard let allImgs = self.ItemsRow["images"] as? [String: AnyObject],
             let thumbImg = allImgs["standard_resolution"] as? [String: AnyObject],
             let urlThumbString = thumbImg["url"] as? String
             else {
@@ -27,10 +25,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
                 return
         }
         
-        print("Success: \(urlThumbString)")
+        
         let url = NSURL(string: urlThumbString)
         self.captionLabel.text = "Tap for details."
         self.provectusImageView.hnk_setImageFromURL(url as! URL)
     }
+    
 
 }
