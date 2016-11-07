@@ -10,10 +10,8 @@ import UIKit
 import Foundation
 
 class ModalViewController: UIViewController {
-
     @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet var SomeImg: UIImageView!
-    
     @IBOutlet var DateOfCreation: UILabel!
     @IBOutlet var OwnerData: UILabel!
     var tmpImg : UIImageView!
@@ -30,13 +28,10 @@ class ModalViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-   
     func loadUsersInfo()  {
-        
-        guard let userdata = self.recipeInfo?["user"] as? [String: AnyObject],
-        let fullNmae = userdata["full_name"] as? String,
-        let usrImg = userdata["profile_picture"] as? String,
+        guard let userData = self.recipeInfo?["user"] as? [String: AnyObject],
+        let fullNmae = userData["full_name"] as? String,
+        let usrImg = userData["profile_picture"] as? String,
         let allImgs = self.recipeInfo?["images"] as? [String: AnyObject],
         let thumbImg = allImgs["standard_resolution"] as? [String: AnyObject],
         let urlThumbString = thumbImg["url"] as? String,
@@ -45,7 +40,6 @@ class ModalViewController: UIViewController {
                 print("Fatality fail")
                 return
         }
-        
         let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto)!))
         let calendar = Calendar.current
         let year = calendar.component(.year, from: date as Date)
@@ -53,12 +47,10 @@ class ModalViewController: UIViewController {
         let day = calendar.component(.day, from: date as Date)
         let hour = calendar.component(.hour, from: date as Date)
         let minutes = calendar.component(.minute, from: date as Date)
-        
         self.SomeImg.hnk_setImageFromURL(NSURL(string: urlThumbString) as! URL )
         self.DateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
         self.OwnerData.text = fullNmae
         self.userPhoto.hnk_setImageFromURL(NSURL(string: usrImg) as! URL )
-
     }
 
     
