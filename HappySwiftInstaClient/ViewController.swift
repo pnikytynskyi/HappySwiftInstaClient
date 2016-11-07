@@ -27,7 +27,7 @@ class ViewController: UICollectionViewController {
     }
 
 
-       func loadUsersPics() {
+    func loadUsersPics() {
 
        let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
         Alamofire.request(url, method: .get).responseJSON{ response in
@@ -52,15 +52,16 @@ class ViewController: UICollectionViewController {
     }
 
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        
-        print("You selected cell #\(indexPath.item)!")
-    }
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let destViewController = ModalViewController()
+//        destViewController.recipeInfo = self.results?[indexPath.row] as! [String : AnyObject]?
+//        
+//        print("You selected cell #\(indexPath.item)!")
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showRecipePhoto") {
             var indexPaths = self.collectionView?.indexPathsForSelectedItems
-            var destViewController: ModalViewController!
+            var destViewController = ModalViewController()
             destViewController = segue.destination as! ModalViewController
             var index_Path = indexPaths![0] as IndexPath
             let b = index_Path.row

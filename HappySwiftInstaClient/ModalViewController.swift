@@ -11,18 +11,22 @@ import UIKit
 
 class ModalViewController: UIViewController {
 
-    @IBOutlet weak var SomeImg: UIImageView!
+    @IBOutlet var SomeImg: UIImageView!
     
-    @IBOutlet weak var DateOfCreation: UILabel!
-    @IBOutlet weak var OwnerData: UILabel!
-    var recipeImageName = String()
+    @IBOutlet var DateOfCreation: UILabel!
+    @IBOutlet var OwnerData: UILabel!
+    var tmpImg : UIImageView!
+    var tmpName: String!
     var recipeInfo: [String:AnyObject]? {
         didSet {
             self.setupImage()
+            self.loadUsersInfo()
         }
     }
 
     override func viewDidLoad() {
+        self.OwnerData.text = tmpName
+        self.SomeImg.image =  tmpImg.image
         super.viewDidLoad()
     }
 
@@ -41,9 +45,22 @@ class ModalViewController: UIViewController {
         
         let url = NSURL(string: urlThumbString)
         print("And the url is: \(url)")
-        self.SomeImg.hnk_setImageFromURL(url as! URL )
+//        accessing outlets before they're loaded in
+        self.tmpImg.hnk_setImageFromURL(url as! URL )
 
     }
+    func loadUsersInfo()  {
+        guard let userdata = self.recipeInfo?["user"] as? [String: AnyObject],
+            let fullNmae = userdata["full_name"] as? String
+            else {
+                print("Fatality fail")
+                return
+        }
+        print("And the usernname is: \(fullNmae)")
+//        accessing outlets before they're loaded in
+        self.tmpName = fullNmae
+    }
+
     
 
 }
