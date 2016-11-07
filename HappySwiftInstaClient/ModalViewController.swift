@@ -17,19 +17,15 @@ class ModalViewController: UIViewController {
     @IBOutlet var OwnerData: UILabel!
     var tmpImg : UIImageView!
     var tmpName: String!
-    var recipeInfo: [String:AnyObject]? {
-        didSet {
-            self.setupImage()
-            self.loadUsersInfo()
-        }
-    }
-
+    var recipeInfo: [String:AnyObject]?
     override func viewDidLoad() {
-        self.OwnerData.text = tmpName
-        self.SomeImg.image =  tmpImg.image
         super.viewDidLoad()
+        
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.setupImage()
+        self.loadUsersInfo()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -45,8 +41,8 @@ class ModalViewController: UIViewController {
         
         let url = NSURL(string: urlThumbString)
         print("And the url is: \(url)")
-//        accessing outlets before they're loaded in
-        self.tmpImg.hnk_setImageFromURL(url as! URL )
+
+        self.SomeImg.hnk_setImageFromURL(url as! URL )
 
     }
     func loadUsersInfo()  {
@@ -57,8 +53,8 @@ class ModalViewController: UIViewController {
                 return
         }
         print("And the usernname is: \(fullNmae)")
-//        accessing outlets before they're loaded in
-        self.tmpName = fullNmae
+
+        self.OwnerData.text = fullNmae
     }
 
     

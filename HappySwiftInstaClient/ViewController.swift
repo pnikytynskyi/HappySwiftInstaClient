@@ -61,7 +61,7 @@ class ViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showRecipePhoto") {
             var indexPaths = self.collectionView?.indexPathsForSelectedItems
-            var destViewController = ModalViewController()
+            var destViewController : ModalViewController
             destViewController = segue.destination as! ModalViewController
             var index_Path = indexPaths![0] as IndexPath
             let b = index_Path.row
