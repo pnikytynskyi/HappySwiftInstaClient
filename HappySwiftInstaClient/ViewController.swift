@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import Haneke
+import Foundation
 let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
 
 class ViewController: UICollectionViewController {
@@ -19,6 +20,9 @@ class ViewController: UICollectionViewController {
     override func viewDidLoad() {
         self.collection_View.allowsSelection = true
         super.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
         self.loadUsersPics()
     }
     override func didReceiveMemoryWarning() {
@@ -31,13 +35,18 @@ class ViewController: UICollectionViewController {
 
        let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
         Alamofire.request(url, method: .get).responseJSON{ response in
-            if let json = response.result.value {
-                let JSON = json as! NSDictionary
-                if let data = JSON["data"] as? [AnyObject] {
-                    self.results = data
-                    self.collection_View.reloadData()
+            if response.result.value != nil {
+                if let json = response.result.value {
+                    let JSON = json as! NSDictionary
+                    if let data = JSON["data"] as? [AnyObject] {
+                        self.results = data
+                        self.collection_View.reloadData()
+                    }
                 }
+            } else {
+                self.loadUsersPics()
             }
+            
         }
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -48,16 +57,11 @@ class ViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "provectusCell", for: indexPath) as! ImageCollectionViewCell
 
         cell.ItemsRow = self.results?[indexPath.row] as! [String : AnyObject]
+        
         return cell
     }
 
     
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let destViewController = ModalViewController()
-//        destViewController.recipeInfo = self.results?[indexPath.row] as! [String : AnyObject]?
-//        
-//        print("You selected cell #\(indexPath.item)!")
-//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showRecipePhoto") {
             var indexPaths = self.collectionView?.indexPathsForSelectedItems

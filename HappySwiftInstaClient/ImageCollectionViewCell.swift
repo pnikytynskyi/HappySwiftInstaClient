@@ -16,6 +16,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
             self.setupItems()
         }
     }
+    
     func setupItems(){
         guard let allImgs = self.ItemsRow["images"] as? [String: AnyObject],
             let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],

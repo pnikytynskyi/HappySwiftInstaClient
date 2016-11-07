@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+import Foundation
 
 class ModalViewController: UIViewController {
 
+    @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet var SomeImg: UIImageView!
     
     @IBOutlet var DateOfCreation: UILabel!
@@ -23,38 +24,41 @@ class ModalViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.setupImage()
+        
         self.loadUsersInfo()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func setupImage(){
-        guard let allImgs = self.recipeInfo?["images"] as? [String: AnyObject],
-            let thumbImg = allImgs["standard_resolution"] as? [String: AnyObject],
-            let urlThumbString = thumbImg["url"] as? String
+   
+    func loadUsersInfo()  {
+        
+        guard let userdata = self.recipeInfo?["user"] as? [String: AnyObject],
+        let fullNmae = userdata["full_name"] as? String,
+        let usrImg = userdata["profile_picture"] as? String,
+        let allImgs = self.recipeInfo?["images"] as? [String: AnyObject],
+        let thumbImg = allImgs["standard_resolution"] as? [String: AnyObject],
+        let urlThumbString = thumbImg["url"] as? String,
+        let timeOfCreationPhoto = self.recipeInfo?["created_time"] as? String
             else {
                 print("Fatality fail")
                 return
         }
         
-        let url = NSURL(string: urlThumbString)
-        print("And the url is: \(url)")
-
-        self.SomeImg.hnk_setImageFromURL(url as! URL )
-
-    }
-    func loadUsersInfo()  {
-        guard let userdata = self.recipeInfo?["user"] as? [String: AnyObject],
-            let fullNmae = userdata["full_name"] as? String
-            else {
-                print("Fatality fail")
-                return
-        }
-        print("And the usernname is: \(fullNmae)")
-
+        let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto)!))
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: date as Date)
+        let month = calendar.component(.month, from: date as Date)
+        let day = calendar.component(.day, from: date as Date)
+        let hour = calendar.component(.hour, from: date as Date)
+        let minutes = calendar.component(.minute, from: date as Date)
+        
+        self.SomeImg.hnk_setImageFromURL(NSURL(string: urlThumbString) as! URL )
+        self.DateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
         self.OwnerData.text = fullNmae
+        self.userPhoto.hnk_setImageFromURL(NSURL(string: usrImg) as! URL )
+
     }
 
     
