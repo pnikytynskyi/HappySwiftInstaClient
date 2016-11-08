@@ -30,13 +30,11 @@ class ViewController: UICollectionViewController {
     func loadUsersPics() {
        let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
         Alamofire.request(url, method: .get).responseJSON{ response in
-            if response.result.value != nil {
-                if let json = response.result.value {
-                    let JSON = json as! NSDictionary
-                    if let data = JSON["data"] as? [AnyObject] {
-                        self.results = data
-                        self.collection_View.reloadData()
-                    }
+            if let json = response.result.value {
+                let JSON = json as! NSDictionary
+                if let data = JSON["data"] as? [AnyObject] {
+                    self.results = data
+                    self.collection_View.reloadData()
                 }
             } else {
                 self.loadUsersPics()
