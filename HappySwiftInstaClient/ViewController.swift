@@ -11,18 +11,14 @@ import SwiftyJSON
 import Alamofire
 import Haneke
 import Foundation
-let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
-
 class ViewController: UICollectionViewController {
+    let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
     var results: [AnyObject]? = []
     @IBOutlet var collection_View: UICollectionView!
     override func viewDidLoad() {
         self.collection_View.allowsSelection = true
-        super.viewDidLoad()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        
         self.loadUsersPics()
+        super.viewDidLoad()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
