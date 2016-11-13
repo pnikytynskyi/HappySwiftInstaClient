@@ -11,20 +11,13 @@ import UIKit
 class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var captionLabel: UILabel!
     @IBOutlet var provectusImageView: UIImageView!
-    var ItemsRow: [String: AnyObject]! {
+    var ItemsRow: MediaViewModel! {
         didSet {
             self.setupItems()
         }
     }
     func setupItems(){
-        guard let allImgs = self.ItemsRow["images"] as? [String: AnyObject],
-            let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],
-            let urlThumbString = thumbImg["url"] as? String
-            else {
-                print("Fatality fail")
-                return
-        }
-        let url = NSURL(string: urlThumbString)
+        let url = ItemsRow.provectusImageView
         self.captionLabel.text = "Tap for details."
         self.provectusImageView.hnk_setImageFromURL(url as! URL)
     }

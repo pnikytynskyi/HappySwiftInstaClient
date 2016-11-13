@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D0CE38F45AD04A73A441619 /* Pods_HappySwiftInstaClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C53707B09F3498FBCB729D /* Pods_HappySwiftInstaClientTests.framework */; };
 		DA554D854BF71F285D08DA2A /* Pods_HappySwiftInstaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232793DF98252C2B5D29A725 /* Pods_HappySwiftInstaClient.framework */; };
+		E965C8CA1DD890020050419B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E965C8C91DD890020050419B /* Media.swift */; };
 		E98A50351DCBDAAE0077A5A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */; };
 		E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50361DCBDAAE0077A5A9 /* ViewController.swift */; };
 		E98A503A1DCBDAAE0077A5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A50381DCBDAAE0077A5A9 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		32C53707B09F3498FBCB729D /* Pods_HappySwiftInstaClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySwiftInstaClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F39B39160F26509EE11AE0 /* Pods-HappySwiftInstaClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0A0B9BB408121A6279D3207 /* Pods-HappySwiftInstaClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		E965C8C91DD890020050419B /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		E98A50311DCBDAAE0077A5A9 /* HappySwiftInstaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappySwiftInstaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E98A50361DCBDAAE0077A5A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				E98A503B1DCBDAAE0077A5A9 /* Assets.xcassets */,
 				E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */,
 				E98A50401DCBDAAE0077A5A9 /* Info.plist */,
+				E965C8C91DD890020050419B /* Media.swift */,
 			);
 			path = HappySwiftInstaClient;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E965C8CA1DD890020050419B /* Media.swift in Sources */,
 				E9F16EED1DCFBD8F008DCFCA /* ModalViewController.swift in Sources */,
 				E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */,
 				E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */,

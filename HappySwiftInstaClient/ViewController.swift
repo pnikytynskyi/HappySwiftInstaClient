@@ -13,6 +13,7 @@ import Haneke
 import Foundation
 class ViewController: UICollectionViewController {
     let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
+    var media: [MediaViewModel]? = []
     var results: [AnyObject]? = []
     @IBOutlet var collection_View: UICollectionView!
     override func viewDidLoad() {
@@ -42,9 +43,9 @@ class ViewController: UICollectionViewController {
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "provectusCell", for: indexPath) as! ImageCollectionViewCell
-
-        cell.ItemsRow = self.results?[indexPath.row] as? [String : AnyObject]
-        
+        let thisItem = self.results?[indexPath.row] as? [String : AnyObject]
+        self.media?.append(whatCell(thisItem!)!)
+        cell.ItemsRow = media?[indexPath.row]
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,11 +53,29 @@ class ViewController: UICollectionViewController {
             var indexPaths = self.collectionView?.indexPathsForSelectedItems
             var destViewController : ModalViewController
             destViewController = segue.destination as! ModalViewController
-            var index_Path = indexPaths![0] as IndexPath
-            destViewController.recipeInfo = self.results?[index_Path.row] as? [String : AnyObject]
+            var index_Path = indexPaths![0]
+            destViewController.recipeInfo = self.media?[index_Path.row]
             self.collection_View.deselectItem(at: index_Path, animated: false)
             
         }
+    }
+    func whatCell(_ path: [String : AnyObject]) -> MediaViewModel? {
+        var ItemsRow = path
+        guard let allImgs = ItemsRow["images"] as? [String: AnyObject],
+            let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],
+            let urlThumbString = thumbImg["url"] as? String,
+            let userData = ItemsRow["user"] as? [String: AnyObject],
+            let fullNmae = userData["full_name"] as? String,
+            let usrImg = userData["profile_picture"] as? String,
+            let bigImg = allImgs["standard_resolution"] as? [String: AnyObject],
+            let urlBigString = bigImg["url"] as? String,
+            let timeOfCreation = ItemsRow["created_time"] as? String
+            else {
+                print("Fatality fail")
+                return nil
+        }
+        let sample = Media(userPhoto: usrImg, SomeImg: urlBigString, DateOfCreation: timeOfCreation, OwnerData: fullNmae, lowRImg: urlThumbString)
+        return MediaViewModel(media: sample)
     }
 }
 
