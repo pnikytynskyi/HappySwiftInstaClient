@@ -24,6 +24,13 @@ class ViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    func addMedia(media: MediaViewModel, index: Int) {
+        if ((self.media?.count)! >= index) {
+            self.media?.insert(media, at: index)
+        } else {
+            self.media?.append(media)
+        }
+    }
     func loadUsersPics() {
        let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
         Alamofire.request(url, method: .get).responseJSON{ response in
@@ -44,7 +51,7 @@ class ViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "provectusCell", for: indexPath) as! ImageCollectionViewCell
         let thisItem = self.results?[indexPath.row] as? [String : AnyObject]
-        self.media?.append(whatCell(thisItem!)!)
+        self.addMedia(media: whatCell(thisItem!)!, index: indexPath.row)
         cell.ItemsRow = media?[indexPath.row]
         return cell
     }
