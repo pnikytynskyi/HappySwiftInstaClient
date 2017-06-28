@@ -17,10 +17,8 @@ class ModalViewController: UIViewController {
     var recipeInfo: MediaViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     override func viewWillAppear(_ animated: Bool) {
-        
         self.loadUsersInfo()
     }
     override func didReceiveMemoryWarning() {

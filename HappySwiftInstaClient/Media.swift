@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/// this struct is meant to hold user's info
 struct Media {
     var photo = ""
     var bigImg = ""
@@ -26,7 +26,7 @@ struct Media {
 }
 
 
-
+/// Model of user's info, images
 class MediaViewModel {
     private var media: Media?
     var ownerData: String? {

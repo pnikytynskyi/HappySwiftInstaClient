@@ -18,10 +18,10 @@ class ViewController: UICollectionViewController {
     let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
     var media: [MediaViewModel]? = []
     var results: [AnyObject]? = []
-    @IBOutlet var collection_View: UICollectionView!
-
+    @IBOutlet var viewWithImages: UICollectionView!
+    
     override func viewDidLoad() {
-        self.collection_View.allowsSelection = true
+        self.viewWithImages.allowsSelection = true
         self.loadUsersPics()
         super.viewDidLoad()
     }
@@ -45,7 +45,7 @@ class ViewController: UICollectionViewController {
                 let JSON = json as! NSDictionary
                 if let data = JSON["data"] as? [AnyObject] {
                     self.results = data
-                    self.collection_View.reloadData()
+                    self.viewWithImages.reloadData()
                 }
             } else {
                 self.loadUsersPics()
@@ -75,7 +75,7 @@ class ViewController: UICollectionViewController {
             destViewController = segue.destination as! ModalViewController
             var index_Path = indexPaths![0]
             destViewController.recipeInfo = self.media?[index_Path.row]
-            self.collection_View.deselectItem(at: index_Path, animated: false)
+            self.viewWithImages.deselectItem(at: index_Path, animated: false)
             
         }
     }
