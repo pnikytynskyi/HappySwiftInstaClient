@@ -15,7 +15,8 @@ struct Media {
     var dOfCreation = ""
     var lowResImg = ""
     var ownerD = ""
-    init(userPhoto: String, SomeImg: String, DateOfCreation: String, OwnerData: String, lowRImg: String) {
+    init(userPhoto: String, SomeImg: String, DateOfCreation: String, OwnerData: String,
+         lowRImg: String) {
         self.photo = userPhoto
         self.bigImg = SomeImg
         self.dOfCreation = DateOfCreation

@@ -6,6 +6,8 @@
 //  Copyright © 2016 pavel. All rights reserved.
 //
 
+/// Please add all frameworks as embeded binaries in the General menu
+
 import UIKit
 import SwiftyJSON
 import Alamofire
@@ -17,14 +19,17 @@ class ViewController: UICollectionViewController {
     var media: [MediaViewModel]? = []
     var results: [AnyObject]? = []
     @IBOutlet var collection_View: UICollectionView!
+
     override func viewDidLoad() {
         self.collection_View.allowsSelection = true
         self.loadUsersPics()
         super.viewDidLoad()
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
     func addMedia(media: MediaViewModel, index: Int) {
         if ((self.media?.count)! >= index) {
             self.media?.insert(media, at: index)
@@ -32,6 +37,7 @@ class ViewController: UICollectionViewController {
             self.media?.append(media)
         }
     }
+
     func loadUsersPics() {
        let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
         Alamofire.request(url, method: .get).responseJSON{ response in
@@ -46,16 +52,22 @@ class ViewController: UICollectionViewController {
             }
         }
     }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
         return self.results?.count ?? 0
     }
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "provectusCell", for: indexPath) as! ImageCollectionViewCell
+
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "provectusCell",
+                                                      for: indexPath) as! ImageCollectionViewCell
         let thisItem = self.results?[indexPath.row] as? [String : AnyObject]
         self.addMedia(media: whatCell(thisItem!)!, index: indexPath.row)
         cell.ItemsRow = media?[indexPath.row]
         return cell
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showRecipePhoto") {
             var indexPaths = self.collectionView?.indexPathsForSelectedItems
@@ -67,6 +79,7 @@ class ViewController: UICollectionViewController {
             
         }
     }
+
     func whatCell(_ path: [String : AnyObject]) -> MediaViewModel? {
         var ItemsRow = path
         guard let allImgs = ItemsRow["images"] as? [String: AnyObject],
@@ -82,7 +95,9 @@ class ViewController: UICollectionViewController {
                 print("Fatality fail")
                 return nil
         }
-        let sample = Media(userPhoto: usrImg, SomeImg: urlBigString, DateOfCreation: timeOfCreation, OwnerData: fullNmae, lowRImg: urlThumbString)
+        let sample = Media(userPhoto: usrImg, SomeImg: urlBigString,
+                           DateOfCreation: timeOfCreation, OwnerData: fullNmae,
+                           lowRImg: urlThumbString)
         return MediaViewModel(media: sample)
     }
 }
