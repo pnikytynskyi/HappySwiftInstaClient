@@ -19,6 +19,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
     func setupItems(){
         let url = ItemsRow.provectusImageView
         self.captionLabel.text = "Tap for details."
-        self.provectusImageView.hnk_setImageFromURL(url as! URL)
+        self.provectusImageView.kf.setImage(with: url! as URL)
     }
 }

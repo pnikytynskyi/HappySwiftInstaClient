@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D0CE38F45AD04A73A441619 /* Pods_HappySwiftInstaClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C53707B09F3498FBCB729D /* Pods_HappySwiftInstaClientTests.framework */; };
-		DA554D854BF71F285D08DA2A /* Pods_HappySwiftInstaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232793DF98252C2B5D29A725 /* Pods_HappySwiftInstaClient.framework */; };
+		E96025901F039A1500BCCAAB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E960257D1F03993100BCCAAB /* Kingfisher.framework */; };
+		E96025911F039A1500BCCAAB /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E960257D1F03993100BCCAAB /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96025791F03945900BCCAAB /* Alamofire.framework */; };
+		E96025931F039A1500BCCAAB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96025791F03945900BCCAAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E96025941F039A1500BCCAAB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E960257A1F03945900BCCAAB /* SwiftyJSON.framework */; };
+		E96025951F039A1500BCCAAB /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E960257A1F03945900BCCAAB /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E965C8CA1DD890020050419B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E965C8C91DD890020050419B /* Media.swift */; };
 		E98A50351DCBDAAE0077A5A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */; };
 		E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50361DCBDAAE0077A5A9 /* ViewController.swift */; };
@@ -30,12 +34,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E96025961F039A1500BCCAAB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E96025911F039A1500BCCAAB /* Kingfisher.framework in Embed Frameworks */,
+				E96025931F039A1500BCCAAB /* Alamofire.framework in Embed Frameworks */,
+				E96025951F039A1500BCCAAB /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1AB4CE2E79AB9D05C7FC7A14 /* Pods-HappySwiftInstaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient.release.xcconfig"; sourceTree = "<group>"; };
-		232793DF98252C2B5D29A725 /* Pods_HappySwiftInstaClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySwiftInstaClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32C53707B09F3498FBCB729D /* Pods_HappySwiftInstaClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySwiftInstaClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38F39B39160F26509EE11AE0 /* Pods-HappySwiftInstaClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A0A0B9BB408121A6279D3207 /* Pods-HappySwiftInstaClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		E96025791F03945900BCCAAB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E960257A1F03945900BCCAAB /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		E960257D1F03993100BCCAAB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		E965C8C91DD890020050419B /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		E98A50311DCBDAAE0077A5A9 /* HappySwiftInstaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappySwiftInstaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +67,6 @@
 		E98A504B1DCBDAAE0077A5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
-		FBEE4D6EB2571D7DA6609CDF /* Pods-HappySwiftInstaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA554D854BF71F285D08DA2A /* Pods_HappySwiftInstaClient.framework in Frameworks */,
+				E96025901F039A1500BCCAAB /* Kingfisher.framework in Frameworks */,
+				E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */,
+				E96025941F039A1500BCCAAB /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,29 +84,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0CE38F45AD04A73A441619 /* Pods_HappySwiftInstaClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23AA76C83A38693175F2CC28 /* Pods */ = {
+		E96025781F03945800BCCAAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FBEE4D6EB2571D7DA6609CDF /* Pods-HappySwiftInstaClient.debug.xcconfig */,
-				1AB4CE2E79AB9D05C7FC7A14 /* Pods-HappySwiftInstaClient.release.xcconfig */,
-				38F39B39160F26509EE11AE0 /* Pods-HappySwiftInstaClientTests.debug.xcconfig */,
-				A0A0B9BB408121A6279D3207 /* Pods-HappySwiftInstaClientTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4C7FBB5862DA88B8CD9EAD7C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				232793DF98252C2B5D29A725 /* Pods_HappySwiftInstaClient.framework */,
-				32C53707B09F3498FBCB729D /* Pods_HappySwiftInstaClientTests.framework */,
+				E960257D1F03993100BCCAAB /* Kingfisher.framework */,
+				E96025791F03945900BCCAAB /* Alamofire.framework */,
+				E960257A1F03945900BCCAAB /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,8 +106,7 @@
 				E98A50331DCBDAAE0077A5A9 /* HappySwiftInstaClient */,
 				E98A50481DCBDAAE0077A5A9 /* HappySwiftInstaClientTests */,
 				E98A50321DCBDAAE0077A5A9 /* Products */,
-				23AA76C83A38693175F2CC28 /* Pods */,
-				4C7FBB5862DA88B8CD9EAD7C /* Frameworks */,
+				E96025781F03945800BCCAAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,12 +151,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E98A504E1DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClient" */;
 			buildPhases = (
-				E645B96E64B351C19D767003 /* [CP] Check Pods Manifest.lock */,
 				E98A502D1DCBDAAD0077A5A9 /* Sources */,
 				E98A502E1DCBDAAD0077A5A9 /* Frameworks */,
 				E98A502F1DCBDAAD0077A5A9 /* Resources */,
-				F7DC8988896C51EC93988131 /* [CP] Embed Pods Frameworks */,
-				EE3388429A0065B594DF5F96 /* [CP] Copy Pods Resources */,
+				E96025961F039A1500BCCAAB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,12 +169,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E98A50511DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClientTests" */;
 			buildPhases = (
-				975BE487B81C7968D9C0A3B9 /* [CP] Check Pods Manifest.lock */,
 				E98A50411DCBDAAE0077A5A9 /* Sources */,
 				E98A50421DCBDAAE0077A5A9 /* Frameworks */,
 				E98A50431DCBDAAE0077A5A9 /* Resources */,
-				8769FFE0A3D4AA3F26E92652 /* [CP] Embed Pods Frameworks */,
-				C3226514BC97C403C9763E8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,7 +190,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = pavel;
 				TargetAttributes = {
 					E98A50301DCBDAAD0077A5A9 = {
@@ -240,99 +242,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8769FFE0A3D4AA3F26E92652 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		975BE487B81C7968D9C0A3B9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C3226514BC97C403C9763E8D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E645B96E64B351C19D767003 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EE3388429A0065B594DF5F96 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F7DC8988896C51EC93988131 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E98A502D1DCBDAAD0077A5A9 /* Sources */ = {
@@ -403,6 +312,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -452,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -478,9 +389,12 @@
 		};
 		E98A504F1DCBDAAE0077A5A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBEE4D6EB2571D7DA6609CDF /* Pods-HappySwiftInstaClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HappySwiftInstaClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.HappySwiftInstaClient;
@@ -491,9 +405,12 @@
 		};
 		E98A50501DCBDAAE0077A5A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AB4CE2E79AB9D05C7FC7A14 /* Pods-HappySwiftInstaClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HappySwiftInstaClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.HappySwiftInstaClient;
@@ -504,7 +421,6 @@
 		};
 		E98A50521DCBDAAE0077A5A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38F39B39160F26509EE11AE0 /* Pods-HappySwiftInstaClientTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HappySwiftInstaClientTests/Info.plist;
@@ -518,7 +434,6 @@
 		};
 		E98A50531DCBDAAE0077A5A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A0B9BB408121A6279D3207 /* Pods-HappySwiftInstaClientTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HappySwiftInstaClientTests/Info.plist;

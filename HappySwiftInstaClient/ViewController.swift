@@ -9,9 +9,10 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
-import Haneke
+import Kingfisher
 import Foundation
 class ViewController: UICollectionViewController {
+    /// token to my Insta account
     let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
     var media: [MediaViewModel]? = []
     var results: [AnyObject]? = []

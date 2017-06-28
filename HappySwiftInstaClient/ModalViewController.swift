@@ -35,10 +35,10 @@ class ModalViewController: UIViewController {
         let day = calendar.component(.day, from: date as Date)
         let hour = calendar.component(.hour, from: date as Date)
         let minutes = calendar.component(.minute, from: date as Date)
-        self.SomeImg.hnk_setImageFromURL(recipeInfo?.someImg as! URL )
+        self.SomeImg.kf.setImage(with: recipeInfo!.someImg! as URL )
         self.DateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
         self.OwnerData.text = recipeInfo?.ownerData
-        self.userPhoto.hnk_setImageFromURL(recipeInfo?.userPhoto as! URL )
+        self.userPhoto.kf.setImage(with: recipeInfo!.userPhoto! as URL )
     }
 
     
