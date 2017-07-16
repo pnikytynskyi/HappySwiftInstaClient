@@ -14,7 +14,7 @@
         <scene sceneID="3J4-ke-9TG">
             <objects>
                 <collectionViewController id="Car-VT-AXi" userLabel="ViewController" customClass="ViewController" customModule="HappySwiftInstaClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="KBy-69-Kfg">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KBy-69-Kfg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,21 +47,21 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.31185897435897436" green="0.31185897435897436" blue="0.31185897435897436" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="8D9-HD-csq" firstAttribute="centerX" secondItem="jgU-ve-YsO" secondAttribute="centerX" id="PR9-bZ-Kib"/>
-                                                <constraint firstItem="8D9-HD-csq" firstAttribute="centerY" secondItem="jgU-ve-YsO" secondAttribute="centerY" id="mSK-aH-LN0"/>
+                                                <constraint firstItem="8D9-HD-csq" firstAttribute="centerX" secondItem="jgU-ve-YsO" secondAttribute="centerX" id="SQz-ud-r4Q"/>
+                                                <constraint firstItem="8D9-HD-csq" firstAttribute="centerY" secondItem="jgU-ve-YsO" secondAttribute="centerY" id="up0-29-bb3"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="trailing" secondItem="FwR-hc-ifF" secondAttribute="trailing" id="5tm-Vy-j9o"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="jgU-ve-YsO" secondAttribute="bottom" constant="90" id="Aiu-N9-SXT"/>
-                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="top" secondItem="Kqz-le-U3C" secondAttribute="topMargin" id="Qcc-TT-KHB"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="FwR-hc-ifF" secondAttribute="bottom" constant="-16" id="Rb7-Tw-aKf"/>
-                                    <constraint firstAttribute="trailing" secondItem="jgU-ve-YsO" secondAttribute="trailing" id="Xue-E1-yFh"/>
-                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="leading" secondItem="FwR-hc-ifF" secondAttribute="leading" id="kU3-C3-UcK"/>
-                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="top" secondItem="FwR-hc-ifF" secondAttribute="top" id="nHe-jS-yJG"/>
-                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="leading" secondItem="Kqz-le-U3C" secondAttribute="leading" id="ym5-Rs-cfU"/>
+                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="trailing" secondItem="FwR-hc-ifF" secondAttribute="trailing" id="DPj-Hp-ouS"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="FwR-hc-ifF" secondAttribute="bottom" constant="-16" id="YBP-6B-zKk"/>
+                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="top" secondItem="Kqz-le-U3C" secondAttribute="topMargin" id="aVZ-rI-4hc"/>
+                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="leading" secondItem="Kqz-le-U3C" secondAttribute="leading" id="ao5-5X-5ym"/>
+                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="leading" secondItem="FwR-hc-ifF" secondAttribute="leading" id="gxA-Zy-aBE"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="jgU-ve-YsO" secondAttribute="bottom" constant="90" id="hhd-k8-kzu"/>
+                                    <constraint firstAttribute="trailing" secondItem="jgU-ve-YsO" secondAttribute="trailing" id="nRx-Ar-LgW"/>
+                                    <constraint firstItem="jgU-ve-YsO" firstAttribute="top" secondItem="FwR-hc-ifF" secondAttribute="top" id="sZe-NB-yJy"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="captionLabel" destination="8D9-HD-csq" id="BPR-ug-juF"/>
@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jp2-Sh-pkk">
-                                <rect key="frame" x="27" y="337" width="320" height="299"/>
+                                <rect key="frame" x="27" y="337" width="321" height="299"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w17-aj-B8A">
                                 <rect key="frame" x="179" y="164" width="180" height="21"/>
