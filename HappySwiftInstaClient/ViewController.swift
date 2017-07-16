@@ -41,11 +41,12 @@ class ViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "provectusCell",
-                                                      for: indexPath) as! ImageCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "provectusCell",                                                for: indexPath) as! ImageCollectionViewCell
         if let thisItem = self.controllerData
             .results?[indexPath.row] as? [String : AnyObject] {
-            self.addMedia(media: self.controllerData.whatCell(thisItem)!, index: indexPath.row)
+            self.addMedia(media: self.controllerData.parseCell(thisItem)!,
+                          index: indexPath.row)
             cell.ItemsRow = self.controllerData.media?[indexPath.row]
         }
         return cell

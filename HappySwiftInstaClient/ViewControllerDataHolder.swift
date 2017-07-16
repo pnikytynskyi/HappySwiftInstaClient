@@ -34,7 +34,8 @@ class ViewControllerDataHolder: NSObject {
             }
         }
     }
-    func whatCell(_ path: [String : AnyObject]) -> MediaViewModel? {
+    
+    func parseCell(_ path: [String : AnyObject]) -> MediaViewModel? {
         var ItemsRow = path
         guard let allImgs = ItemsRow["images"] as? [String: AnyObject],
             let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],
