@@ -15,15 +15,12 @@ class ModalViewController: UIViewController {
     @IBOutlet var DateOfCreation: UILabel!
     @IBOutlet var OwnerData: UILabel!
     var recipeInfo: MediaViewModel?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.loadUsersInfo()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+
     func loadUsersInfo()  {
         let timeOfCreationPhoto = recipeInfo?.dateOfCreation
         let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto!)!))

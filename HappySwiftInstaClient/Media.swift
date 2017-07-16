@@ -28,33 +28,21 @@ struct Media {
 
 /// Model of user's info, images
 class MediaViewModel {
-    private var media: Media?
+    private var media: Media
     var ownerData: String? {
-        return media?.ownerD
+        return media.ownerD
     }
     var dateOfCreation: String? {
-        return media?.dOfCreation
+        return media.dOfCreation
     }
     var userPhoto: NSURL? {
-        guard let userPhoto = media?.photo
-            else {
-                return nil
-        }
-        return NSURL(string: userPhoto)
+        return NSURL(string: media.photo)
     }
     var someImg: NSURL? {
-        guard let someImg = media?.bigImg
-            else {
-                return nil
-        }
-        return NSURL(string: someImg)
+        return NSURL(string: media.bigImg)
     }
     var provectusImageView: NSURL? {
-        guard let provectusImageView = media?.lowResImg
-            else {
-                return nil
-        }
-        return NSURL(string: provectusImageView)
+        return NSURL(string: media.lowResImg)
     }
     init(media: Media) {
         self.media = media
