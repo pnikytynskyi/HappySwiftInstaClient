@@ -56,4 +56,18 @@ class ViewControllerDataHolder: NSObject {
         return MediaViewModel(media: sample)
     }
 
+    func setUpReferenceSizeClasses(controller: ViewController) {
+
+        let traitCollectionHCompact = UITraitCollection(
+            horizontalSizeClass: UIUserInterfaceSizeClass.compact)
+        let traitCollectionVRegular = UITraitCollection(verticalSizeClass: UIUserInterfaceSizeClass.regular)
+        controller.compactRegular = UITraitCollection(traitsFrom:
+            [traitCollectionHCompact, traitCollectionVRegular])
+
+        let traitCollectionHAny = UITraitCollection(horizontalSizeClass: UIUserInterfaceSizeClass.unspecified)
+        let traitCollectionVAny = UITraitCollection(verticalSizeClass: UIUserInterfaceSizeClass.unspecified)
+        controller.anyAny = UITraitCollection(traitsFrom:
+            [traitCollectionHAny, traitCollectionVAny])
+    }
+    
 }

@@ -22,24 +22,9 @@ class ViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewWithImages?.allowsSelection = true
-        setUpReferenceSizeClasses()
+        self.controllerData.setUpReferenceSizeClasses(controller: self)
     }
-
-    func setUpReferenceSizeClasses() {
-
-        let traitCollectionHCompact = UITraitCollection(
-            horizontalSizeClass: UIUserInterfaceSizeClass.compact)
-        let traitCollectionVRegular = UITraitCollection(verticalSizeClass: UIUserInterfaceSizeClass.regular)
-        compactRegular = UITraitCollection(traitsFrom:
-            [traitCollectionHCompact, traitCollectionVRegular])
-
-        let traitCollectionHAny = UITraitCollection(horizontalSizeClass: UIUserInterfaceSizeClass.unspecified)
-        let traitCollectionVAny = UITraitCollection(verticalSizeClass: UIUserInterfaceSizeClass.unspecified)
-        anyAny = UITraitCollection(traitsFrom:
-            [traitCollectionHAny, traitCollectionVAny])
-    }
-
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.controllerData.loadUsersPics(controller: self)
