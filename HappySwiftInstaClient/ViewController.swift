@@ -15,21 +15,15 @@ import Kingfisher
 import Foundation
 class ViewController: UICollectionViewController {
     let controllerData = ViewControllerDataHolder()
-    var willTransitionToPortrait = false
-    var compactRegular = UITraitCollection()
-    var anyAny = UITraitCollection()
-    @IBOutlet weak var viewWithImages: UICollectionView?
+    @IBOutlet weak var viewWithImages: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewWithImages?.allowsSelection = true
-        self.controllerData.setUpReferenceSizeClasses(controller: self)
+        self.viewWithImages.allowsSelection = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.controllerData.loadUsersPics(controller: self)
-        willTransitionToPortrait = self.view.frame.size.height >
-            self.view.frame.size.width
     }
 
     func addMedia(media: MediaViewModel, index: Int) {
@@ -65,19 +59,21 @@ class ViewController: UICollectionViewController {
             destViewController = segue.destination as! ModalViewController
             var index_Path = indexPaths![0]
             destViewController.recipeInfo = self.controllerData.media?[index_Path.row]
-            self.viewWithImages?.deselectItem(at: index_Path, animated: false)
+            self.viewWithImages.deselectItem(at: index_Path, animated: false)
         }
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        willTransitionToPortrait = size.height > size.width
+        super.viewWillTransition(to: size, with: coordinator)
+        updateCollectionViewLayout(with: size)
     }
 
-    override func overrideTraitCollection(forChildViewController childViewController: UIViewController) -> UITraitCollection {
-        let traitCollectionForOverride = (willTransitionToPortrait) ? compactRegular : anyAny
-        print("77777777777777")
-        return traitCollectionForOverride
+    private func updateCollectionViewLayout(with size: CGSize) {
+        self.viewWithImages.collectionViewLayout.invalidateLayout()
+        self.viewWithImages.reloadData()
     }
+
+
 }
 
 
