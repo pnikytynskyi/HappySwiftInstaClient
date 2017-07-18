@@ -15,15 +15,36 @@ import Kingfisher
 import Foundation
 class ViewController: UICollectionViewController {
     let controllerData = ViewControllerDataHolder()
+    var willTransitionToPortrait = false
+    var compactRegular = UITraitCollection()
+    var anyAny = UITraitCollection()
     @IBOutlet weak var viewWithImages: UICollectionView?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewWithImages?.allowsSelection = true
+        setUpReferenceSizeClasses()
     }
+
+    func setUpReferenceSizeClasses() {
+
+        let traitCollectionHCompact = UITraitCollection(
+            horizontalSizeClass: UIUserInterfaceSizeClass.compact)
+        let traitCollectionVRegular = UITraitCollection(verticalSizeClass: UIUserInterfaceSizeClass.regular)
+        compactRegular = UITraitCollection(traitsFrom:
+            [traitCollectionHCompact, traitCollectionVRegular])
+
+        let traitCollectionHAny = UITraitCollection(horizontalSizeClass: UIUserInterfaceSizeClass.unspecified)
+        let traitCollectionVAny = UITraitCollection(verticalSizeClass: UIUserInterfaceSizeClass.unspecified)
+        anyAny = UITraitCollection(traitsFrom:
+            [traitCollectionHAny, traitCollectionVAny])
+    }
+
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.controllerData.loadUsersPics(controller: self)
+        willTransitionToPortrait = self.view.frame.size.height >
+            self.view.frame.size.width
     }
 
     func addMedia(media: MediaViewModel, index: Int) {
@@ -63,6 +84,15 @@ class ViewController: UICollectionViewController {
         }
     }
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        willTransitionToPortrait = size.height > size.width
+    }
+
+    override func overrideTraitCollection(forChildViewController childViewController: UIViewController) -> UITraitCollection {
+        let traitCollectionForOverride = (willTransitionToPortrait) ? compactRegular : anyAny
+        print("77777777777777")
+        return traitCollectionForOverride
+    }
 }
 
 
