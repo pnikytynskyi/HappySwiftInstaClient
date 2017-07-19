@@ -13,7 +13,7 @@ import SwiftyJSON
 import Alamofire
 import Kingfisher
 import Foundation
-class ViewController: UICollectionViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     let controllerData = ViewControllerDataHolder()
     @IBOutlet weak var viewWithImages: UICollectionView!
     override func viewDidLoad() {
@@ -34,14 +34,14 @@ class ViewController: UICollectionViewController {
         }
     }
 
-    override func collectionView(_ collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
         return self.controllerData.results?.count ?? 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
+        let cell = viewWithImages.dequeueReusableCell(
             withReuseIdentifier: "provectusCell",                                                for: indexPath) as! ImageCollectionViewCell
         if let thisItem = self.controllerData
             .results?[indexPath.row] as? [String : AnyObject] {
@@ -54,7 +54,7 @@ class ViewController: UICollectionViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showRecipePhoto") {
-            var indexPaths = self.collectionView?.indexPathsForSelectedItems
+            var indexPaths = self.viewWithImages.indexPathsForSelectedItems
             var destViewController : ModalViewController
             destViewController = segue.destination as! ModalViewController
             var index_Path = indexPaths![0]
