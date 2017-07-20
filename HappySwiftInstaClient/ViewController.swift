@@ -63,17 +63,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
 
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        updateCollectionViewLayout(with: size)
-    }
-
-    private func updateCollectionViewLayout(with size: CGSize) {
-        self.viewWithImages.collectionViewLayout.invalidateLayout()
-        self.viewWithImages.reloadData()
-    }
-
-
 }
 
 

@@ -11,16 +11,23 @@ import Foundation
 
 class ModalViewController: UIViewController {
     @IBOutlet weak var userPhoto: UIImageView!
-    @IBOutlet var SomeImg: UIImageView!
-    @IBOutlet var DateOfCreation: UILabel!
-    @IBOutlet var OwnerData: UILabel!
+    @IBOutlet weak var someImg: UIImageView!
+    @IBOutlet weak var dateOfCreation: UILabel!
+    @IBOutlet weak var ownerData: UILabel!
+    var userPhotoFrameSize: CGSize?
     var recipeInfo: MediaViewModel?
+
+// MARK: constraints
+    
+
+    @IBOutlet weak var topConstraintForBigPicture: NSLayoutConstraint?
+
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadUsersInfo()
+        self.updateContentViewLayout(with: UIScreen.main.bounds.size)
     }
-
     func loadUsersInfo()  {
         let timeOfCreationPhoto = recipeInfo?.dateOfCreation
         let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto!)!))
@@ -30,12 +37,41 @@ class ModalViewController: UIViewController {
         let day = calendar.component(.day, from: date as Date)
         let hour = calendar.component(.hour, from: date as Date)
         let minutes = calendar.component(.minute, from: date as Date)
-        self.SomeImg.kf.setImage(with: recipeInfo!.someImg! as URL )
-        self.DateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
-        self.OwnerData.text = recipeInfo?.ownerData
+        self.someImg.kf.setImage(with: recipeInfo!.someImg! as URL )
+        self.dateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
+        self.ownerData.text = recipeInfo?.ownerData
         self.userPhoto.kf.setImage(with: recipeInfo!.userPhoto! as URL )
     }
 
-    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        updateContentViewLayout(with: size)
+    }
+var p = 0
+    private func updateContentViewLayout(with size: CGSize) {
+        if UIDevice.current.orientation.isLandscape {
+            self.userPhoto.isHidden = true
+            self.dateOfCreation.isHidden = true
+            self.ownerData.isHidden = true
+            let userPhotoFrameHeight = self.userPhotoFrameSize != nil ?
+                self.userPhotoFrameSize!.height : CGFloat(150)
+            if p < 1 {
+                self.topConstraintForBigPicture?.constant = -(userPhotoFrameHeight + 22)
+                p += 1
+            } else {
+                self.topConstraintForBigPicture?.constant = 5555555
+
+            }
+            print(userPhotoFrameHeight)
+
+        } else if UIDevice.current.orientation.isPortrait {
+            self.userPhoto.isHidden = false
+            self.dateOfCreation.isHidden = false
+            self.ownerData.isHidden = false
+//            userPhotoFrameSize = userPhoto.frame.size
+            self.topConstraintForBigPicture?.constant = userPhoto.frame.size.height + 40
+        }
+    }
 
 }
+
