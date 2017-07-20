@@ -55,14 +55,12 @@ class ModalViewController: UIViewController {
             let userPhotoFrameHeight = self.userPhotoFrameSize != nil ?
                 self.userPhotoFrameSize!.height : CGFloat(150)
             self.topConstraintForBigPicture?.constant = -(userPhotoFrameHeight + 22)
-            print(userPhotoFrameHeight)
-
         } else if UIDevice.current.orientation.isPortrait {
             self.userPhoto.isHidden = false
             self.dateOfCreation.isHidden = false
             self.ownerData.isHidden = false
             userPhotoFrameSize = userPhoto.frame.size
-            self.topConstraintForBigPicture?.constant = userPhoto.frame.size.height + 40
+            self.topConstraintForBigPicture?.constant = 40
         }
     }
 

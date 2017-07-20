@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4sz-3f-ioO">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="SOo-sj-DEg" customClass="ViewController" customModule="HappySwiftInstaClient" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="O9g-XY-gog">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xBH-KT-Ymf">
@@ -96,7 +96,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xdI-ze-Jb4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="blw-jP-u32">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w17-aj-B8A">
@@ -120,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jp2-Sh-pkk">
-                                <rect key="frame" x="20" y="298" width="374" height="96"/>
+                                <rect key="frame" x="20" y="298" width="374" height="418"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="418" id="1Ye-KC-nEF"/>
                                     <constraint firstAttribute="width" constant="374" id="9OZ-sD-kTR"/>
@@ -150,7 +150,6 @@
                             <constraint firstItem="w17-aj-B8A" firstAttribute="leading" secondItem="G3M-qb-ih7" secondAttribute="trailing" constant="17" id="b1q-R7-wMt"/>
                             <constraint firstItem="G3M-qb-ih7" firstAttribute="top" secondItem="dXc-5R-m9x" secondAttribute="bottom" constant="42" id="cMU-r0-Mla"/>
                             <constraint firstItem="xdI-ze-Jb4" firstAttribute="top" secondItem="Jp2-Sh-pkk" secondAttribute="bottom" constant="20" id="gpl-jR-3AK"/>
-                            <constraint firstItem="Jp2-Sh-pkk" firstAttribute="top" secondItem="G3M-qb-ih7" secondAttribute="bottom" constant="42" id="hrY-dq-cJi"/>
                             <constraint firstItem="Jp2-Sh-pkk" firstAttribute="top" secondItem="G3M-qb-ih7" secondAttribute="bottom" constant="42" id="ngR-L4-9bM"/>
                             <constraint firstItem="Jp2-Sh-pkk" firstAttribute="leading" secondItem="blw-jP-u32" secondAttribute="leadingMargin" id="oB7-GP-KtU"/>
                         </constraints>
