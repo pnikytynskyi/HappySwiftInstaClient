@@ -47,7 +47,7 @@ class ModalViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         updateContentViewLayout(with: size)
     }
-var p = 0
+    var p = 0
     private func updateContentViewLayout(with size: CGSize) {
         if UIDevice.current.orientation.isLandscape {
             self.userPhoto.isHidden = true
@@ -55,20 +55,14 @@ var p = 0
             self.ownerData.isHidden = true
             let userPhotoFrameHeight = self.userPhotoFrameSize != nil ?
                 self.userPhotoFrameSize!.height : CGFloat(150)
-            if p < 1 {
-                self.topConstraintForBigPicture?.constant = -(userPhotoFrameHeight + 22)
-                p += 1
-            } else {
-                self.topConstraintForBigPicture?.constant = 5555555
-
-            }
+            self.topConstraintForBigPicture?.constant = -(userPhotoFrameHeight + 22)
             print(userPhotoFrameHeight)
 
         } else if UIDevice.current.orientation.isPortrait {
             self.userPhoto.isHidden = false
             self.dateOfCreation.isHidden = false
             self.ownerData.isHidden = false
-//            userPhotoFrameSize = userPhoto.frame.size
+            userPhotoFrameSize = userPhoto.frame.size
             self.topConstraintForBigPicture?.constant = userPhoto.frame.size.height + 40
         }
     }
