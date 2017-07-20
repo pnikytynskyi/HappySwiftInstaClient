@@ -47,7 +47,6 @@ class ModalViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         updateContentViewLayout(with: size)
     }
-    var p = 0
     private func updateContentViewLayout(with size: CGSize) {
         if UIDevice.current.orientation.isLandscape {
             self.userPhoto.isHidden = true
