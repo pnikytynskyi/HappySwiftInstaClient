@@ -18,17 +18,15 @@ class ModalViewController: UIViewController {
     var recipeInfo: MediaViewModel?
 
 // MARK: constraints
-    
 
     @IBOutlet weak var topConstraintForBigPicture: NSLayoutConstraint?
-
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadUsersInfo()
         self.updateContentViewLayout(with: UIScreen.main.bounds.size)
     }
-    func loadUsersInfo()  {
+    func loadUsersInfo() {
         let timeOfCreationPhoto = recipeInfo?.dateOfCreation
         let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto!)!))
         let calendar = Calendar.current
@@ -65,4 +63,3 @@ class ModalViewController: UIViewController {
     }
 
 }
-

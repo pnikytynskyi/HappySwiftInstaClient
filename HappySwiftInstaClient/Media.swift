@@ -15,16 +15,15 @@ struct Media {
     var dOfCreation = ""
     var lowResImg = ""
     var ownerD = ""
-    init(userPhoto: String, SomeImg: String, DateOfCreation: String, OwnerData: String,
+    init(userPhoto: String, someImg: String, dateOfCreation: String, ownerData: String,
          lowRImg: String) {
         self.photo = userPhoto
-        self.bigImg = SomeImg
-        self.dOfCreation = DateOfCreation
-        self.ownerD = OwnerData
+        self.bigImg = someImg
+        self.dOfCreation = dateOfCreation
+        self.ownerD = ownerData
         self.lowResImg = lowRImg
     }
 }
-
 
 /// Model of user's info, images
 class MediaViewModel {

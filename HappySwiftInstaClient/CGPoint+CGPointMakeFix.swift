@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension CGPoint{
-    init(_ x:CGFloat,_ y:CGFloat) {
-        self.init(x:x,y:y)
+extension CGPoint {
+    init(_ argumentX: CGFloat, _ argumentY: CGFloat) {
+        self.init(x: argumentX, y: argumentY)
     }
 }

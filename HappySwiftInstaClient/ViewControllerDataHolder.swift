@@ -22,9 +22,9 @@ class ViewControllerDataHolder: NSObject {
 
     func loadUsersPics(controller: ViewController) {
         let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(self.accessToken)"
-        Alamofire.request(url, method: .get).responseJSON{ response in
-            if let json = response.result.value {
-                let JSON = json as! NSDictionary
+        Alamofire.request(url, method: .get).responseJSON { response in
+            if let json = response.result.value,
+                let JSON = json as? NSDictionary {
                 if let data = JSON["data"] as? [AnyObject] {
                     self.results = data
                     controller.viewWithImages?.reloadData()
@@ -34,7 +34,7 @@ class ViewControllerDataHolder: NSObject {
             }
         }
     }
-    
+
     func parseCell(_ path: [String : AnyObject]) -> MediaViewModel? {
         var ItemsRow = path
         guard let allImgs = ItemsRow["images"] as? [String: AnyObject],
@@ -50,8 +50,8 @@ class ViewControllerDataHolder: NSObject {
                 print("Fatality fail")
                 return nil
         }
-        let sample = Media(userPhoto: usrImg, SomeImg: urlBigString,
-                           DateOfCreation: timeOfCreation, OwnerData: fullNmae,
+        let sample = Media(userPhoto: usrImg, someImg: urlBigString,
+                           dateOfCreation: timeOfCreation, ownerData: fullNmae,
                            lowRImg: urlThumbString)
         return MediaViewModel(media: sample)
     }
