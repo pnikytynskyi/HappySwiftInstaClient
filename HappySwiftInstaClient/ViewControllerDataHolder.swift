@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import Kingfisher
-import Foundation
+import UIKit
 import PromiseKit
 class ViewControllerDataHolder: NSObject {
     /// token to my Insta account
@@ -20,22 +20,44 @@ class ViewControllerDataHolder: NSObject {
     override init() {
         super.init()
     }
+    var url: String {
+        return "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
+    }
 
-    func loadUsersPics() {
-        let url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(self.accessToken)"
+    func loadUsersPics(controller: ViewController) {
         Alamofire.request(url, method: .get).responseJSON { response in
             if let json = response.result.value,
                 let JSON = json as? NSDictionary {
                 if let data = JSON["data"] as? [AnyObject] {
                     self.results = data
+                    controller.viewWithImages.reloadData()
                 }
             } else {
-                self.loadUsersPics()
+                self.loadUsersPics(controller: controller)
             }
         }
     }
 
-    func parseCell(_ path: [String : AnyObject]) -> MediaViewModel? {
+    func list() -> Promise<[String: Any]> {
+        return Promise { fulfill, reject in
+            Alamofire.request(url)
+                .validate()
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let json):
+                        guard let dictionary = json as? [String: Any] else {
+                            reject("not a dictionary" as! Error)
+                            return
+                        }
+                        fulfill(dictionary)
+                    case .failure(let error):
+                        reject(error)
+                    }
+            }
+        }
+    }
+
+    func parseCell(_ path: [String: AnyObject]) -> MediaViewModel? {
         var itemsRow = path
         guard let allImgs = itemsRow["images"] as? [String: AnyObject],
             let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],

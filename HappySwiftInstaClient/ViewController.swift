@@ -28,8 +28,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func loadUsersPics() {
-        controllerData.loadUsersPics()
-        viewWithImages?.reloadData()
+        controllerData.loadUsersPics(controller: self)
     }
 
     func addMedia(media: MediaViewModel, index: Int) {
@@ -49,7 +48,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = ImageCollectionViewCell()
         if let thisItem = self.controllerData
-            .results?[indexPath.row] as? [String : AnyObject],
+            .results?[indexPath.row] as? [String: AnyObject],
             let provectusCell = viewWithImages.dequeueReusableCell(
                 withReuseIdentifier: "provectusCell", for: indexPath)
                 as? ImageCollectionViewCell {
