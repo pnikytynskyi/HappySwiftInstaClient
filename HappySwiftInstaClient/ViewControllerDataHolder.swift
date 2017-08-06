@@ -38,18 +38,19 @@ class ViewControllerDataHolder: NSObject {
         }
     }
 
-    func list() -> Promise<[String: Any]> {
+    func list() -> Promise<[AnyObject]> {
         return Promise { fulfill, reject in
             Alamofire.request(url)
                 .validate()
                 .responseJSON { response in
                     switch response.result {
                     case .success(let json):
-                        guard let dictionary = json as? [String: Any] else {
+                        guard let dictionary = json as? [String: AnyObject],
+                            let dic = dictionary["data"] as? [AnyObject]  else {
                             reject("not a dictionary" as! Error)
                             return
                         }
-                        fulfill(dictionary)
+                        fulfill(dic)
                     case .failure(let error):
                         reject(error)
                     }

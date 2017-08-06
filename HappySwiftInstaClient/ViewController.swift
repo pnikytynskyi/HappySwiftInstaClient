@@ -28,7 +28,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func loadUsersPics() {
-        controllerData.loadUsersPics(controller: self)
+        firstly {
+            controllerData.list()
+            }.then { result in
+                self.controllerData.results = result
+            }.always {
+                 self.jjj()
+            }.catch { e in
+
+        }
+    }
+
+    func jjj() {
+        self.viewWithImages.reloadData()
     }
 
     func addMedia(media: MediaViewModel, index: Int) {
