@@ -13,6 +13,7 @@ import SwiftyJSON
 import Alamofire
 import Kingfisher
 import Foundation
+import PromiseKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     let controllerData = ViewControllerDataHolder()
     @IBOutlet weak var viewWithImages: UICollectionView!
@@ -23,7 +24,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.controllerData.loadUsersPics(controller: self)
+        self.loadUsersPics()
+    }
+
+    func loadUsersPics() {
+        controllerData.loadUsersPics()
+        viewWithImages?.reloadData()
     }
 
     func addMedia(media: MediaViewModel, index: Int) {

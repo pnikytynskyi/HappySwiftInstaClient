@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91BD28F1F3717FC006649B2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; };
+		E91BD2901F371814006649B2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; };
+		E91BD2911F371814006649B2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E96025901F039A1500BCCAAB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E960257D1F03993100BCCAAB /* Kingfisher.framework */; };
 		E96025911F039A1500BCCAAB /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E960257D1F03993100BCCAAB /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96025791F03945900BCCAAB /* Alamofire.framework */; };
@@ -46,6 +49,7 @@
 				E96025911F039A1500BCCAAB /* Kingfisher.framework in Embed Frameworks */,
 				E96025931F039A1500BCCAAB /* Alamofire.framework in Embed Frameworks */,
 				E96025951F039A1500BCCAAB /* SwiftyJSON.framework in Embed Frameworks */,
+				E91BD2911F371814006649B2 /* PromiseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E91BD28E1F3717FC006649B2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		E96025791F03945900BCCAAB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E960257A1F03945900BCCAAB /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		E960257D1F03993100BCCAAB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -79,6 +84,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96025901F039A1500BCCAAB /* Kingfisher.framework in Frameworks */,
+				E91BD28F1F3717FC006649B2 /* PromiseKit.framework in Frameworks */,
+				E91BD2901F371814006649B2 /* PromiseKit.framework in Frameworks */,
 				E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */,
 				E96025941F039A1500BCCAAB /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -97,6 +104,7 @@
 		E96025781F03945800BCCAAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E91BD28E1F3717FC006649B2 /* PromiseKit.framework */,
 				E960257D1F03993100BCCAAB /* Kingfisher.framework */,
 				E96025791F03945900BCCAAB /* Alamofire.framework */,
 				E960257A1F03945900BCCAAB /* SwiftyJSON.framework */,
@@ -194,7 +202,6 @@
 				E98A502F1DCBDAAD0077A5A9 /* Resources */,
 				E96025961F039A1500BCCAAB /* Embed Frameworks */,
 				E92715CC1F2FB0E400FF20B9 /* ShellScript */,
-				697D43196A3AA8CF81C9BFCB /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -284,20 +291,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		697D43196A3AA8CF81C9BFCB /* Tailor */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Tailor;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if hash tailor 2>/dev/null; then\n  tailor\nelse\n  echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
-		};
 		E92715CC1F2FB0E400FF20B9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -309,7 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Analyze\" ]; then\n    if hash tailor 2>/dev/null; then\n        tailor\n    else\n        echo \"warning: Please install Tailor from https://tailor.sh\"\n    fi\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import PromiseKit
 
 class ModalViewController: UIViewController {
     @IBOutlet weak var userPhoto: UIImageView!
