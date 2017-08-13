@@ -31,7 +31,7 @@
 		E98A503C1DCBDAAE0077A5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98A503B1DCBDAAE0077A5A9 /* Assets.xcassets */; };
 		E98A503F1DCBDAAE0077A5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */; };
 		E98A504A1DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */; };
-		E99A201C1F1BEC5800CD492D /* ViewControllerDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A201B1F1BEC5800CD492D /* ViewControllerDataHolder.swift */; };
+		E99A201C1F1BEC5800CD492D /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A201B1F1BEC5800CD492D /* DataHolder.swift */; };
 		E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */; };
 		E9F01FA11F1E61E2001B2752 /* CGPoint+CGPointMakeFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F01FA01F1E61E2001B2752 /* CGPoint+CGPointMakeFix.swift */; };
 		E9F16EED1DCFBD8F008DCFCA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */; };
@@ -86,7 +86,7 @@
 		E98A50451DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappySwiftInstaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappySwiftInstaClientTests.swift; sourceTree = "<group>"; };
 		E98A504B1DCBDAAE0077A5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E99A201B1F1BEC5800CD492D /* ViewControllerDataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDataHolder.swift; sourceTree = "<group>"; };
+		E99A201B1F1BEC5800CD492D /* DataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9F01FA01F1E61E2001B2752 /* CGPoint+CGPointMakeFix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+CGPointMakeFix.swift"; sourceTree = "<group>"; };
 		E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */,
-				E99A201B1F1BEC5800CD492D /* ViewControllerDataHolder.swift */,
+				E99A201B1F1BEC5800CD492D /* DataHolder.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 				E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */,
 				E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */,
 				E9F01FA11F1E61E2001B2752 /* CGPoint+CGPointMakeFix.swift in Sources */,
-				E99A201C1F1BEC5800CD492D /* ViewControllerDataHolder.swift in Sources */,
+				E99A201C1F1BEC5800CD492D /* DataHolder.swift in Sources */,
 				E98A50351DCBDAAE0077A5A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

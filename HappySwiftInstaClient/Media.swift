@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 ///// this struct is meant to hold user's info
 //class Media : Object {
 //    dynamic var photo = ""
@@ -19,26 +20,19 @@ import RealmSwift
 //}
 
 /// Model of user's info, images
-class MediaList: Object {
+class Media: Object, BaseMappable {
     dynamic var jsonData = [AnyObject]()
-    dynamic var photo = ""
-    dynamic var bigImg = ""
-    dynamic var dOfCreation = ""
-    dynamic var lowResImg = ""
-    dynamic var ownerD = ""
-    dynamic var ownerData: String? {
-        return self.ownerD
+    dynamic var userPhoto = ""
+    dynamic var someImg = ""
+    dynamic var dateOfCreation = ""
+    dynamic var provectusImageView = ""
+    dynamic var ownerData = ""
+
+    class func objectForMapping(map: Map) -> BaseMappable? {
+        return Media()
     }
-    dynamic var dateOfCreation: String? {
-        return self.dOfCreation
-    }
-    dynamic var userPhoto: NSURL? {
-        return NSURL(string: self.photo)
-    }
-    dynamic var someImg: NSURL? {
-        return NSURL(string: self.bigImg)
-    }
-    dynamic var provectusImageView: NSURL? {
-        return NSURL(string: self.lowResImg)
+
+    func mapping(map: Map) {
+//        photo <- map["images"]["th"]
     }
 }

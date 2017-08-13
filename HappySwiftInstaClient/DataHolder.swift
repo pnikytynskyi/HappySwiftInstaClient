@@ -12,13 +12,14 @@ import Alamofire
 import Kingfisher
 import RealmSwift
 import PromiseKit
+import ObjectMapper
 class ViewControllerDataHolder: NSObject {
     /// token to my Insta account
     let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
-    var mediaList: [MediaList]? = []
-    var items = List<MediaList>()
+    var mediaList: [Media]? = []
+    var items = List<Media>()
     var results: [AnyObject]? {
-        guard let media = realm.objects(MediaList.self).first else {return nil}
+        guard let media = realm.objects(Media.self).first else {return nil}
         return media.jsonData
     }
     let realm = try! Realm()
@@ -50,18 +51,17 @@ class ViewControllerDataHolder: NSObject {
     }
 
     @discardableResult func parceJsonToRealm(json: [AnyObject]) -> Promise<Any> {
-        let media = MediaList()
+        let media = Mapper<Media>().mapArray(JSONArray: [AnyObject])
         return Promise { fulfill, reject in
             if !json.isEmpty {
                 do {
-                    media.jsonData = json
                     try realm.write {
                         realm.add(media)
                     }
                 } catch let error as NSError {
                     reject(error)
                 }
-                let a = realm.objects(MediaList.self)
+                let a = realm.objects(Media.self)
                 fulfill(a)
             } else {
                 reject("Fail" as! Error)
@@ -69,8 +69,27 @@ class ViewControllerDataHolder: NSObject {
         }
     }
 
-    func parseCell(_ path: [String: AnyObject]) -> MediaList? {
+    func parseCell(_ path: [String: AnyObject]) -> Promise<Media>? {
         var itemsRow = path
+        return Promise { fulfill, reject in
+            if !path.isEmpty {
+                guard let allImgs = itemsRow["images"] as? [String: AnyObject],
+                    let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],
+                    let urlThumbString = thumbImg["url"] as? String,
+                    let userData = itemsRow["user"] as? [String: AnyObject],
+                    let fullNmae = userData["full_name"] as? String,
+                    let usrImg = userData["profile_picture"] as? String,
+                    let bigImg = allImgs["standard_resolution"] as? [String: AnyObject],
+                    let urlBigString = bigImg["url"] as? String,
+                    let timeOfCreation = itemsRow["created_time"] as? String
+                    else {
+                        print("Fatality fail")
+                        return nil
+                }
+
+            }
+        }
+
         guard let allImgs = itemsRow["images"] as? [String: AnyObject],
             let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],
             let urlThumbString = thumbImg["url"] as? String,
@@ -84,10 +103,7 @@ class ViewControllerDataHolder: NSObject {
                 print("Fatality fail")
                 return nil
         }
-        let sample = Media(userPhoto: usrImg, someImg: urlBigString,
-                           dateOfCreation: timeOfCreation, ownerData: fullNmae,
-                           lowRImg: urlThumbString)
-        return MediaViewModel(media: sample)
+        
     }
 
 }
