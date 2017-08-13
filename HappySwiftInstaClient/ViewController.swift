@@ -31,16 +31,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         firstly {
             controllerData.list()
             }.then { result in
-                self.controllerData.results = result
+                // Промисом парсишь в реалм
+                self.controllerData.parceJsonToRealm(json: result)
             }.always {
-                 self.jjj()
+                 self.viewWithImages.reloadData()
             }.catch { e in
-
+    
         }
-    }
-
-    func jjj() {
-        self.viewWithImages.reloadData()
     }
 
     func addMedia(media: MediaViewModel, index: Int) {

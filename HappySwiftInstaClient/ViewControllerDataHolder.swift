@@ -10,32 +10,23 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import Kingfisher
-import UIKit
+import RealmSwift
 import PromiseKit
 class ViewControllerDataHolder: NSObject {
     /// token to my Insta account
     let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
-    var media: [MediaViewModel]? = []
-    var results: [AnyObject]? = []
+    var mediaList: [MediaList]? = []
+    var items = List<MediaList>()
+    var results: [AnyObject]? {
+        guard let media = realm.objects(MediaList.self).first else {return nil}
+        return media.jsonData
+    }
+    let realm = try! Realm()
     override init() {
         super.init()
     }
     var url: String {
         return "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
-    }
-
-    func loadUsersPics(controller: ViewController) {
-        Alamofire.request(url, method: .get).responseJSON { response in
-            if let json = response.result.value,
-                let JSON = json as? NSDictionary {
-                if let data = JSON["data"] as? [AnyObject] {
-                    self.results = data
-                    controller.viewWithImages.reloadData()
-                }
-            } else {
-                self.loadUsersPics(controller: controller)
-            }
-        }
     }
 
     func list() -> Promise<[AnyObject]> {
@@ -58,7 +49,27 @@ class ViewControllerDataHolder: NSObject {
         }
     }
 
-    func parseCell(_ path: [String: AnyObject]) -> MediaViewModel? {
+    @discardableResult func parceJsonToRealm(json: [AnyObject]) -> Promise<Any> {
+        let media = MediaList()
+        return Promise { fulfill, reject in
+            if !json.isEmpty {
+                do {
+                    media.jsonData = json
+                    try realm.write {
+                        realm.add(media)
+                    }
+                } catch let error as NSError {
+                    reject(error)
+                }
+                let a = realm.objects(MediaList.self)
+                fulfill(a)
+            } else {
+                reject("Fail" as! Error)
+            }
+        }
+    }
+
+    func parseCell(_ path: [String: AnyObject]) -> MediaList? {
         var itemsRow = path
         guard let allImgs = itemsRow["images"] as? [String: AnyObject],
             let thumbImg = allImgs["low_resolution"] as? [String: AnyObject],

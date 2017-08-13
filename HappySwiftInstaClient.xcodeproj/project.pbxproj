@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		E91BD28F1F3717FC006649B2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; };
 		E91BD2911F371814006649B2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E94079711F3F74C600A5886D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796E1F3F74C600A5886D /* ObjectMapper.framework */; };
+		E94079721F3F74C600A5886D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796F1F3F74C600A5886D /* Realm.framework */; };
+		E94079731F3F74C600A5886D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94079701F3F74C600A5886D /* RealmSwift.framework */; };
+		E94079741F3F74CD00A5886D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796E1F3F74C600A5886D /* ObjectMapper.framework */; };
+		E94079751F3F74CD00A5886D /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E940796E1F3F74C600A5886D /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E94079761F3F74CD00A5886D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796F1F3F74C600A5886D /* Realm.framework */; };
+		E94079771F3F74CD00A5886D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E940796F1F3F74C600A5886D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E94079781F3F74CD00A5886D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94079701F3F74C600A5886D /* RealmSwift.framework */; };
+		E94079791F3F74CD00A5886D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E94079701F3F74C600A5886D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E96025901F039A1500BCCAAB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E960257D1F03993100BCCAAB /* Kingfisher.framework */; };
 		E96025911F039A1500BCCAAB /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E960257D1F03993100BCCAAB /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96025791F03945900BCCAAB /* Alamofire.framework */; };
@@ -45,8 +54,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E94079771F3F74CD00A5886D /* Realm.framework in Embed Frameworks */,
 				E96025911F039A1500BCCAAB /* Kingfisher.framework in Embed Frameworks */,
+				E94079791F3F74CD00A5886D /* RealmSwift.framework in Embed Frameworks */,
 				E96025931F039A1500BCCAAB /* Alamofire.framework in Embed Frameworks */,
+				E94079751F3F74CD00A5886D /* ObjectMapper.framework in Embed Frameworks */,
 				E96025951F039A1500BCCAAB /* SwiftyJSON.framework in Embed Frameworks */,
 				E91BD2911F371814006649B2 /* PromiseKit.framework in Embed Frameworks */,
 			);
@@ -57,6 +69,9 @@
 
 /* Begin PBXFileReference section */
 		E91BD28E1F3717FC006649B2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		E940796E1F3F74C600A5886D /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		E940796F1F3F74C600A5886D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		E94079701F3F74C600A5886D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		E96025791F03945900BCCAAB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E960257A1F03945900BCCAAB /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		E960257D1F03993100BCCAAB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -82,9 +97,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94079761F3F74CD00A5886D /* Realm.framework in Frameworks */,
 				E96025901F039A1500BCCAAB /* Kingfisher.framework in Frameworks */,
 				E91BD28F1F3717FC006649B2 /* PromiseKit.framework in Frameworks */,
+				E94079711F3F74C600A5886D /* ObjectMapper.framework in Frameworks */,
+				E94079721F3F74C600A5886D /* Realm.framework in Frameworks */,
+				E94079731F3F74C600A5886D /* RealmSwift.framework in Frameworks */,
+				E94079781F3F74CD00A5886D /* RealmSwift.framework in Frameworks */,
 				E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */,
+				E94079741F3F74CD00A5886D /* ObjectMapper.framework in Frameworks */,
 				E96025941F039A1500BCCAAB /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +123,9 @@
 		E96025781F03945800BCCAAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E940796E1F3F74C600A5886D /* ObjectMapper.framework */,
+				E940796F1F3F74C600A5886D /* Realm.framework */,
+				E94079701F3F74C600A5886D /* RealmSwift.framework */,
 				E91BD28E1F3717FC006649B2 /* PromiseKit.framework */,
 				E960257D1F03993100BCCAAB /* Kingfisher.framework */,
 				E96025791F03945900BCCAAB /* Alamofire.framework */,

@@ -7,43 +7,38 @@
 //
 
 import Foundation
-
-/// this struct is meant to hold user's info
-struct Media {
-    var photo = ""
-    var bigImg = ""
-    var dOfCreation = ""
-    var lowResImg = ""
-    var ownerD = ""
-    init(userPhoto: String, someImg: String, dateOfCreation: String, ownerData: String,
-         lowRImg: String) {
-        self.photo = userPhoto
-        self.bigImg = someImg
-        self.dOfCreation = dateOfCreation
-        self.ownerD = ownerData
-        self.lowResImg = lowRImg
-    }
-}
+import RealmSwift
+///// this struct is meant to hold user's info
+//class Media : Object {
+//    dynamic var photo = ""
+//    dynamic var bigImg = ""
+//    dynamic var dOfCreation = ""
+//    dynamic var lowResImg = ""
+//    dynamic var ownerD = ""
+//
+//}
 
 /// Model of user's info, images
-class MediaViewModel {
-    private var media: Media
-    var ownerData: String? {
-        return media.ownerD
+class MediaList: Object {
+    dynamic var jsonData = [AnyObject]()
+    dynamic var photo = ""
+    dynamic var bigImg = ""
+    dynamic var dOfCreation = ""
+    dynamic var lowResImg = ""
+    dynamic var ownerD = ""
+    dynamic var ownerData: String? {
+        return self.ownerD
     }
-    var dateOfCreation: String? {
-        return media.dOfCreation
+    dynamic var dateOfCreation: String? {
+        return self.dOfCreation
     }
-    var userPhoto: NSURL? {
-        return NSURL(string: media.photo)
+    dynamic var userPhoto: NSURL? {
+        return NSURL(string: self.photo)
     }
-    var someImg: NSURL? {
-        return NSURL(string: media.bigImg)
+    dynamic var someImg: NSURL? {
+        return NSURL(string: self.bigImg)
     }
-    var provectusImageView: NSURL? {
-        return NSURL(string: media.lowResImg)
-    }
-    init(media: Media) {
-        self.media = media
+    dynamic var provectusImageView: NSURL? {
+        return NSURL(string: self.lowResImg)
     }
 }
