@@ -20,10 +20,10 @@ import ObjectMapper
 //}
 
 /// Model of user's info, images
-class Media: Object, BaseMappable {
+class Media: Object, StaticMappable {
     dynamic var userPhoto = ""
     dynamic var someImg = ""
-    dynamic var dateOfCreation = ""
+    dynamic var dateOfCreation = Date()
     dynamic var provectusImageView = ""
     dynamic var ownerData = ""
 
@@ -32,11 +32,11 @@ class Media: Object, BaseMappable {
     }
 
     func mapping(map: Map) {
-        userPhoto           <- map["images"]["profile_picture"]
-        someImg             <- map["images"]["standard_resolution"]["url"]
-        ownerData           <- map["user"]
-        dateOfCreation      <- map["created_time"]
-        provectusImageView  <- map["images"]["low_resolution"]["url"]
+        userPhoto           <- map["user.profile_picture"]
+        someImg             <- map["images.standard_resolution.url"]
+        ownerData           <- map["user.full_name"]
+        dateOfCreation      <- (map["created_time"], DateTransform())
+        provectusImageView  <- map["images.low_resolution.url"]
     }
 }
 

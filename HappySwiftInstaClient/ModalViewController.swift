@@ -29,13 +29,13 @@ class ModalViewController: UIViewController {
     }
     func loadUsersInfo() {
         let timeOfCreationPhoto = recipeInfo?.dateOfCreation
-        let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto!)!))
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: date as Date)
-        let month = calendar.component(.month, from: date as Date)
-        let day = calendar.component(.day, from: date as Date)
-        let hour = calendar.component(.hour, from: date as Date)
-        let minutes = calendar.component(.minute, from: date as Date)
+//        let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto!)!))
+//        let calendar = Calendar.current
+//        let year = calendar.component(.year, from: date as Date)
+//        let month = calendar.component(.month, from: date as Date)
+//        let day = calendar.component(.day, from: date as Date)
+//        let hour = calendar.component(.hour, from: date as Date)
+//        let minutes = calendar.component(.minute, from: date as Date)
 //        self.someImg.kf.setImage(with: recipeInfo!.someImg! as URL )
 //        self.dateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
 //        self.ownerData.text = recipeInfo?.ownerData

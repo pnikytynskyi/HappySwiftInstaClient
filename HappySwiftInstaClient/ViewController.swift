@@ -36,7 +36,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }.always {
                  self.viewWithImages.reloadData()
             }.catch { e in
-                fatalError(e as! String)
+                print(e)
         }
     }
 

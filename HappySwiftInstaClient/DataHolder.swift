@@ -58,10 +58,9 @@ class ViewControllerDataHolder: NSObject {
 
     @discardableResult func writeJsonToRealm(jsonArray: [AnyObject]) -> Promise<Any> {
         return Promise { fulfill, reject in
-            guard let jsonArray = jsonArray as? [[String : Any]] else {
+            guard let media = Mapper<Media>().mapArray(JSONObject: jsonArray) else {
                 return reject(ApiError(errorDescription:"ERROR"))
             }
-            let media = Mapper<Media>().mapArray(JSONArray: jsonArray)
             for m in media {
                 mediaList.append(m)
             }
