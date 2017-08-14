@@ -32,40 +32,41 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             controllerData.list()
             }.then { result in
                 // Промисом парсишь в реалм
-                self.controllerData.parceJsonToRealm(json: result)
+                self.controllerData.writeJsonToRealm(jsonArray: result)
             }.always {
                  self.viewWithImages.reloadData()
             }.catch { e in
-    
+                fatalError(e as! String)
         }
     }
 
-    func addMedia(media: MediaViewModel, index: Int) {
-        if (self.controllerData.media?.count)! >= index {
-            self.controllerData.media?.insert(media, at: index)
-        } else {
-            self.controllerData.media?.append(media)
-        }
+    func addMedia(media: Media, index: Int) {
+//        if (self.controllerData.media?.count)! >= index {
+//            self.controllerData.media?.insert(media, at: index)
+//        } else {
+//            self.controllerData.media?.append(media)
+//        }
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return self.controllerData.results?.count ?? 0
+
+        return self.controllerData.mediaList.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = ImageCollectionViewCell()
-        if let thisItem = self.controllerData
-            .results?[indexPath.row] as? [String: AnyObject],
-            let provectusCell = viewWithImages.dequeueReusableCell(
-                withReuseIdentifier: "provectusCell", for: indexPath)
-                as? ImageCollectionViewCell {
-            cell = provectusCell
-            self.addMedia(media: self.controllerData.parseCell(thisItem)!,
-                          index: indexPath.row)
-            cell.itemsRow = self.controllerData.media?[indexPath.row]
-        }
+////        if let thisItem = self.controllerData
+//            .results?[indexPath.row] as? [String: AnyObject],
+//            let provectusCell = viewWithImages.dequeueReusableCell(
+//                withReuseIdentifier: "provectusCell", for: indexPath)
+//                as? ImageCollectionViewCell {
+//            cell = provectusCell
+////            self.addMedia(media: self.controllerData.parseCell(thisItem)!,
+////                          index: indexPath.row)
+////            cell.itemsRow = self.controllerData.media?[indexPath.row]
+//        }
         return cell
     }
 
@@ -76,7 +77,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return
             }
             var index_Path = indexPaths![0]
-            destViewController.recipeInfo = self.controllerData.media?[index_Path.row]
+            destViewController.recipeInfo = self.controllerData.mediaList[index_Path.row]
             self.viewWithImages.deselectItem(at: index_Path, animated: false)
         }
     }

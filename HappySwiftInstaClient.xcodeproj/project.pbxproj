@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90D0DF41F42280F000E2F0D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D0DF31F42280F000E2F0D /* ApiError.swift */; };
 		E91BD28F1F3717FC006649B2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; };
 		E91BD2911F371814006649B2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E94079711F3F74C600A5886D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796E1F3F74C600A5886D /* ObjectMapper.framework */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E90D0DF31F42280F000E2F0D /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		E91BD28E1F3717FC006649B2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		E940796E1F3F74C600A5886D /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		E940796F1F3F74C600A5886D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		E960259A1F039D4B00BCCAAB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E90D0DF31F42280F000E2F0D /* ApiError.swift */,
 				E98A50341DCBDAAE0077A5A9 /* AppDelegate.swift */,
 				E98A50381DCBDAAE0077A5A9 /* Main.storyboard */,
 				E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */,
@@ -338,6 +341,7 @@
 				E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */,
 				E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */,
 				E9F01FA11F1E61E2001B2752 /* CGPoint+CGPointMakeFix.swift in Sources */,
+				E90D0DF41F42280F000E2F0D /* ApiError.swift in Sources */,
 				E99A201C1F1BEC5800CD492D /* DataHolder.swift in Sources */,
 				E98A50351DCBDAAE0077A5A9 /* AppDelegate.swift in Sources */,
 			);

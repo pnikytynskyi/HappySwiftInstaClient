@@ -16,7 +16,7 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var dateOfCreation: UILabel!
     @IBOutlet weak var ownerData: UILabel!
     var userPhotoFrameSize: CGSize?
-    var recipeInfo: MediaViewModel?
+    var recipeInfo: Media?
 
 // MARK: constraints
 
@@ -36,10 +36,10 @@ class ModalViewController: UIViewController {
         let day = calendar.component(.day, from: date as Date)
         let hour = calendar.component(.hour, from: date as Date)
         let minutes = calendar.component(.minute, from: date as Date)
-        self.someImg.kf.setImage(with: recipeInfo!.someImg! as URL )
-        self.dateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
-        self.ownerData.text = recipeInfo?.ownerData
-        self.userPhoto.kf.setImage(with: recipeInfo!.userPhoto! as URL )
+//        self.someImg.kf.setImage(with: recipeInfo!.someImg! as URL )
+//        self.dateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
+//        self.ownerData.text = recipeInfo?.ownerData
+//        self.userPhoto.kf.setImage(with: recipeInfo!.userPhoto! as URL )
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

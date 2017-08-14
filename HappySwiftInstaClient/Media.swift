@@ -21,7 +21,6 @@ import ObjectMapper
 
 /// Model of user's info, images
 class Media: Object, BaseMappable {
-    dynamic var jsonData = [AnyObject]()
     dynamic var userPhoto = ""
     dynamic var someImg = ""
     dynamic var dateOfCreation = ""
@@ -33,6 +32,28 @@ class Media: Object, BaseMappable {
     }
 
     func mapping(map: Map) {
-//        photo <- map["images"]["th"]
+        userPhoto           <- map["images"]["profile_picture"]
+        someImg             <- map["images"]["standard_resolution"]["url"]
+        ownerData           <- map["user"]
+        dateOfCreation      <- map["created_time"]
+        provectusImageView  <- map["images"]["low_resolution"]["url"]
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
+import PromiseKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var captionLabel: UILabel?
     @IBOutlet var provectusImageView: UIImageView?
-    var itemsRow: MediaViewModel! {
+    var medias = [Media]()
+    var itemsRow: Media! {
         didSet {
             self.setupItems()
         }
     }
-    func setupItems() {
+    @discardableResult func setupItems() {
+        let realm = try! Realm()
+        let mediasObjects = realm.objects(Media.self)
+        for media in mediasObjects {
+            self.medias.append(media)
+        }
         let url = itemsRow.provectusImageView
         self.captionLabel?.text = "Tap for details."
-        self.provectusImageView?.kf.setImage(with: url! as URL)
+        self.provectusImageView?.kf.setImage(with: url as? URL)
     }
 }
