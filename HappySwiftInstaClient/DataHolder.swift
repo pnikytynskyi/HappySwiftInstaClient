@@ -13,11 +13,11 @@ import Kingfisher
 import RealmSwift
 import PromiseKit
 import ObjectMapper
-class ViewControllerDataHolder: NSObject {
+class DataHolder: NSObject {
     /// token to my Insta account
 
     let accessToken = "4118608180.f19655b.284e7365f677467890393d6460f60423"
-    var mediaList = [Media]()
+    var mediaResults = [Media]()
     var items = List<Media>()
     override init() {
         super.init()
@@ -26,7 +26,7 @@ class ViewControllerDataHolder: NSObject {
         return "https://api.instagram.com/v1/users/self/media/recent/?access_token=\(accessToken)"
     }
 
-    func list() -> Promise<[AnyObject]> {
+    func firstAPICall() -> Promise<[AnyObject]> {
         return Promise { fulfill, reject in
             Alamofire.request(url)
                 .validate()
@@ -56,24 +56,35 @@ class ViewControllerDataHolder: NSObject {
         }
     }
 
+    func getAllMedia() -> Promise<Results<Media>> {
+        return Promise { fulfill, regect in
+            let realm = try Realm()
+            let object = realm.objects(Media.self)
+            fulfill(object)
+            }.recover { error -> Results<Media> in
+                throw error.apiError
+        }
+    }
+
     @discardableResult func writeJsonToRealm(jsonArray: [AnyObject]) -> Promise<Any> {
         return Promise { fulfill, reject in
             guard let media = Mapper<Media>().mapArray(JSONObject: jsonArray) else {
                 return reject(ApiError(errorDescription:"ERROR"))
             }
-            for m in media {
-                mediaList.append(m)
-            }
             let realm = try Realm()
             if !jsonArray.isEmpty {
                 do {
                     try realm.write {
-                        realm.add(media)
+                        realm.add(media, update: true)
                     }
                 } catch let error as NSError {
                     reject(error)
                 }
                 let allMedia = realm.objects(Media.self)
+                if !mediaResults.isEmpty && !allMedia.isEmpty {
+                    self.mediaResults.removeAll()
+                    self.mediaResults = allMedia.toArray()
+                }
                 fulfill(allMedia)
             } else {
                 reject("Fail" as! Error)

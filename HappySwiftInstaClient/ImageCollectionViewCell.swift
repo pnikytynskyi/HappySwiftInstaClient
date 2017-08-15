@@ -19,12 +19,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
             self.setupItems()
         }
     }
-    @discardableResult func setupItems() {
-        let realm = try! Realm()
-        let mediasObjects = realm.objects(Media.self)
-        for media in mediasObjects {
-            self.medias.append(media)
-        }
+    func setupItems() {
         let url = itemsRow.provectusImageView
         self.captionLabel?.text = "Tap for details."
         self.provectusImageView?.kf.setImage(with: url as? URL)

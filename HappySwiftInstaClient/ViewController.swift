@@ -14,8 +14,9 @@ import Alamofire
 import Kingfisher
 import Foundation
 import PromiseKit
+import RealmSwift
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    let controllerData = ViewControllerDataHolder()
+    private let controllerData = DataHolder()
     @IBOutlet weak var viewWithImages: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +30,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func loadUsersPics() {
         firstly {
-            controllerData.list()
+            controllerData.firstAPICall()
             }.then { result in
-                // Промисом парсишь в реалм
+                // Промисом маппится в реалм
                 self.controllerData.writeJsonToRealm(jsonArray: result)
             }.always {
                  self.viewWithImages.reloadData()
@@ -40,33 +41,30 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
 
-    func addMedia(media: Media, index: Int) {
-//        if (self.controllerData.media?.count)! >= index {
-//            self.controllerData.media?.insert(media, at: index)
-//        } else {
-//            self.controllerData.media?.append(media)
-//        }
-    }
-
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-
-        return self.controllerData.mediaList.count
+        var countOfCells = 0
+        firstly {
+            controllerData.getAllMedia()
+            }.then { reslts -> Void in
+                countOfCells = reslts.count
+//                print(countOfCells)
+            }.catch { e in
+                print(e)
+        }
+        return countOfCells
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = ImageCollectionViewCell()
-////        if let thisItem = self.controllerData
-//            .results?[indexPath.row] as? [String: AnyObject],
-//            let provectusCell = viewWithImages.dequeueReusableCell(
-//                withReuseIdentifier: "provectusCell", for: indexPath)
-//                as? ImageCollectionViewCell {
-//            cell = provectusCell
-////            self.addMedia(media: self.controllerData.parseCell(thisItem)!,
-////                          index: indexPath.row)
-////            cell.itemsRow = self.controllerData.media?[indexPath.row]
-//        }
+        guard let provectusCell = self.viewWithImages
+            .dequeueReusableCell(withReuseIdentifier: "provectusCell",
+                                 for: indexPath) as? ImageCollectionViewCell else {
+                                    fatalError("Faile to fetch data")
+        }
+//        cell.itemsRow = allMedia[indexPath.row]
+        cell = provectusCell
         return cell
     }
 
@@ -77,9 +75,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return
             }
             var index_Path = indexPaths![0]
-            destViewController.recipeInfo = self.controllerData.mediaList[index_Path.row]
+//            destViewController.recipeInfo = self.controllerData.mediaList[index_Path.row]
             self.viewWithImages.deselectItem(at: index_Path, animated: false)
         }
-    }
-
 }
+}
+
+
+
