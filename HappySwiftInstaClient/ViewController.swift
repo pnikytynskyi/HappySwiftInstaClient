@@ -11,7 +11,6 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
-import Kingfisher
 import Foundation
 import PromiseKit
 import RealmSwift
