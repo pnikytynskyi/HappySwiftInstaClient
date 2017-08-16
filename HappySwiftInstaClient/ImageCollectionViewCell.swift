@@ -7,18 +7,29 @@
 //
 
 import UIKit
+import Kingfisher
+import AlamofireImage
+import Alamofire
 
 class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var captionLabel: UILabel?
     @IBOutlet var provectusImageView: UIImageView?
-    var itemsRow: MediaViewModel! {
+    var medias = [Media]()
+    var itemsRow: Media! {
         didSet {
             self.setupItems()
         }
     }
     func setupItems() {
         let url = itemsRow.provectusImageView
-        self.captionLabel?.text = "Tap for details."
-        self.provectusImageView?.kf.setImage(with: url! as URL)
+        Alamofire.request(url).responseImage { response in
+            if let image = response.result.value,
+                let expectedlabel = self.captionLabel,
+                let expectedImg = self.provectusImageView {
+                expectedlabel.text = "Tap for details."
+                expectedImg.image  = image
+            }
+        }
+
     }
 }

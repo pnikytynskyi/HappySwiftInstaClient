@@ -7,43 +7,48 @@
 //
 
 import Foundation
-
-/// this struct is meant to hold user's info
-struct Media {
-    var photo = ""
-    var bigImg = ""
-    var dOfCreation = ""
-    var lowResImg = ""
-    var ownerD = ""
-    init(userPhoto: String, someImg: String, dateOfCreation: String, ownerData: String,
-         lowRImg: String) {
-        self.photo = userPhoto
-        self.bigImg = someImg
-        self.dOfCreation = dateOfCreation
-        self.ownerD = ownerData
-        self.lowResImg = lowRImg
-    }
-}
-
+import RealmSwift
+import ObjectMapper
 /// Model of user's info, images
-class MediaViewModel {
-    private var media: Media
-    var ownerData: String? {
-        return media.ownerD
+class Media: Object, StaticMappable {
+    dynamic var userPhoto = ""
+    dynamic var someImg = ""
+    dynamic var id = ""
+    dynamic var dateOfCreation = Date()
+    dynamic var provectusImageView = ""
+    dynamic var ownerData = ""
+
+    class func objectForMapping(map: Map) -> BaseMappable? {
+        return Media()
     }
-    var dateOfCreation: String? {
-        return media.dOfCreation
+    override class func primaryKey() -> String? {
+        return "id"
     }
-    var userPhoto: NSURL? {
-        return NSURL(string: media.photo)
-    }
-    var someImg: NSURL? {
-        return NSURL(string: media.bigImg)
-    }
-    var provectusImageView: NSURL? {
-        return NSURL(string: media.lowResImg)
-    }
-    init(media: Media) {
-        self.media = media
+
+    func mapping(map: Map) {
+        userPhoto           <- map["user.profile_picture"]
+        someImg             <- map["images.standard_resolution.url"]
+        id                  <- map["images.standard_resolution.url"]
+        ownerData           <- map["user.full_name"]
+        dateOfCreation      <- (map["created_time"], DateTransform())
+        provectusImageView  <- map["images.low_resolution.url"]
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

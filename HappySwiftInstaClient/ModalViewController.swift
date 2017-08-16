@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 import PromiseKit
+import Alamofire
+import AlamofireImage
 
 class ModalViewController: UIViewController {
     @IBOutlet weak var userPhoto: UIImageView!
@@ -16,7 +18,7 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var dateOfCreation: UILabel!
     @IBOutlet weak var ownerData: UILabel!
     var userPhotoFrameSize: CGSize?
-    var recipeInfo: MediaViewModel?
+    var recipeInfo: Media?
 
 // MARK: constraints
 
@@ -28,18 +30,27 @@ class ModalViewController: UIViewController {
         self.updateContentViewLayout(with: UIScreen.main.bounds.size)
     }
     func loadUsersInfo() {
-        let timeOfCreationPhoto = recipeInfo?.dateOfCreation
-        let date = NSDate(timeIntervalSince1970: TimeInterval(IntMax(timeOfCreationPhoto!)!))
+        guard let desiredInfo = recipeInfo else {
+            fatalError("Can not get recipeInfo")
+        }
+        let date = desiredInfo.dateOfCreation
         let calendar = Calendar.current
-        let year = calendar.component(.year, from: date as Date)
-        let month = calendar.component(.month, from: date as Date)
-        let day = calendar.component(.day, from: date as Date)
-        let hour = calendar.component(.hour, from: date as Date)
-        let minutes = calendar.component(.minute, from: date as Date)
-        self.someImg.kf.setImage(with: recipeInfo!.someImg! as URL )
-        self.dateOfCreation.text = "\(year) \(month)/\(day) \(hour):\(minutes)"
-        self.ownerData.text = recipeInfo?.ownerData
-        self.userPhoto.kf.setImage(with: recipeInfo!.userPhoto! as URL )
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        Alamofire.request(desiredInfo.someImg).responseImage { response in
+            if let image = response.result.value {
+                 self.someImg.image = image
+            }
+        }
+        Alamofire.request(desiredInfo.userPhoto).responseImage { response in
+            if let image = response.result.value {
+                 self.userPhoto.image = image
+            }
+        }
+
+        self.dateOfCreation.text = "\(year) \(month)/\(day)"
+        self.ownerData.text = desiredInfo.ownerData
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

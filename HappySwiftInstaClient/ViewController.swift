@@ -14,12 +14,13 @@ import Alamofire
 import Kingfisher
 import Foundation
 import PromiseKit
+import RealmSwift
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    let controllerData = ViewControllerDataHolder()
     @IBOutlet weak var viewWithImages: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewWithImages.allowsSelection = true
+        DataService.shared.getMediaAndSetVarLocalMedia() // get local Realm data
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,47 +30,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func loadUsersPics() {
         firstly {
-            controllerData.list()
+            NetService.shared.firstAPICall()
             }.then { result in
-                self.controllerData.results = result
+                // Промисом маппится в реалм
+                DataService.shared.writeJsonToRealm(jsonArray: result)
             }.always {
-                 self.jjj()
+                 self.viewWithImages.reloadData()
             }.catch { e in
-
-        }
-    }
-
-    func jjj() {
-        self.viewWithImages.reloadData()
-    }
-
-    func addMedia(media: MediaViewModel, index: Int) {
-        if (self.controllerData.media?.count)! >= index {
-            self.controllerData.media?.insert(media, at: index)
-        } else {
-            self.controllerData.media?.append(media)
+                print(e)
         }
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return self.controllerData.results?.count ?? 0
+        return DataService.shared.localMedia.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = ImageCollectionViewCell()
-        if let thisItem = self.controllerData
-            .results?[indexPath.row] as? [String: AnyObject],
-            let provectusCell = viewWithImages.dequeueReusableCell(
-                withReuseIdentifier: "provectusCell", for: indexPath)
-                as? ImageCollectionViewCell {
-            cell = provectusCell
-            self.addMedia(media: self.controllerData.parseCell(thisItem)!,
-                          index: indexPath.row)
-            cell.itemsRow = self.controllerData.media?[indexPath.row]
+        guard let provectusCell = self.viewWithImages
+            .dequeueReusableCell(withReuseIdentifier: "provectusCell",
+                                 for: indexPath) as? ImageCollectionViewCell else {
+                                    fatalError("Faile to fetch data")
         }
-        return cell
+        provectusCell.itemsRow = DataService.shared.localMedia[indexPath.row]
+        return provectusCell
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,9 +64,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return
             }
             var index_Path = indexPaths![0]
-            destViewController.recipeInfo = self.controllerData.media?[index_Path.row]
+            destViewController.recipeInfo = DataService.shared.localMedia[index_Path.row]
             self.viewWithImages.deselectItem(at: index_Path, animated: false)
         }
-    }
-
 }
+}
+
+
+
