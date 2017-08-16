@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import RealmSwift
-import PromiseKit
+import Kingfisher
+import AlamofireImage
+import Alamofire
 
 class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var captionLabel: UILabel?
@@ -21,7 +22,14 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     func setupItems() {
         let url = itemsRow.provectusImageView
-        self.captionLabel?.text = "Tap for details."
-        self.provectusImageView?.kf.setImage(with: url as? URL)
+        Alamofire.request(url).responseImage { response in
+            if let image = response.result.value,
+                let expectedlabel = self.captionLabel,
+                let expectedImg = self.provectusImageView {
+                expectedlabel.text = "Tap for details."
+                expectedImg.image  = image
+            }
+        }
+
     }
 }
