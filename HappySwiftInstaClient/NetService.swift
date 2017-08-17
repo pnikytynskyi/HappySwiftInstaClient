@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import Alamofire
-import Kingfisher
 import RealmSwift
 import PromiseKit
 import ObjectMapper
