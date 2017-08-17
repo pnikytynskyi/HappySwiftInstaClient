@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3A10B3D5184EA6A9D027C5 /* Pods_HappySwiftInstaClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF0D957D8239B3A098C87 /* Pods_HappySwiftInstaClientTests.framework */; };
 		9A2EAC861F45C6DE0005822D /* NetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EAC851F45C6DE0005822D /* NetService.swift */; };
 		9A2EAC881F45C6E80005822D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EAC871F45C6E80005822D /* DataService.swift */; };
 		9A2EAC8B1F45C6F70005822D /* CGPoint+CGPointMakeFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EAC891F45C6F70005822D /* CGPoint+CGPointMakeFix.swift */; };
@@ -15,27 +16,20 @@
 		9A2EAC921F45C70A0005822D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EAC8E1F45C70A0005822D /* AppDelegate.swift */; };
 		9A2EAC931F45C70A0005822D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2EAC8F1F45C70A0005822D /* Assets.xcassets */; };
 		9A2EAC941F45C70A0005822D /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9A2EAC901F45C70A0005822D /* Base.lproj */; };
-		E91BD28F1F3717FC006649B2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; };
-		E91BD2911F371814006649B2 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E91BD28E1F3717FC006649B2 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E94079711F3F74C600A5886D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796E1F3F74C600A5886D /* ObjectMapper.framework */; };
-		E94079731F3F74C600A5886D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94079701F3F74C600A5886D /* RealmSwift.framework */; };
-		E94079741F3F74CD00A5886D /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796E1F3F74C600A5886D /* ObjectMapper.framework */; };
-		E94079751F3F74CD00A5886D /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E940796E1F3F74C600A5886D /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E94079761F3F74CD00A5886D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940796F1F3F74C600A5886D /* Realm.framework */; };
-		E94079771F3F74CD00A5886D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E940796F1F3F74C600A5886D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E94079791F3F74CD00A5886D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E94079701F3F74C600A5886D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96025791F03945900BCCAAB /* Alamofire.framework */; };
-		E96025931F039A1500BCCAAB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96025791F03945900BCCAAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E96025941F039A1500BCCAAB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E960257A1F03945900BCCAAB /* SwiftyJSON.framework */; };
-		E96025951F039A1500BCCAAB /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E960257A1F03945900BCCAAB /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E965C8CA1DD890020050419B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E965C8C91DD890020050419B /* Media.swift */; };
 		E98A50371DCBDAAE0077A5A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50361DCBDAAE0077A5A9 /* ViewController.swift */; };
 		E98A503A1DCBDAAE0077A5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A50381DCBDAAE0077A5A9 /* Main.storyboard */; };
 		E98A503F1DCBDAAE0077A5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A503D1DCBDAAE0077A5A9 /* LaunchScreen.storyboard */; };
 		E98A504A1DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */; };
 		E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */; };
-		E9CFEA1F1F44CBC200B27300 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CFEA1E1F44CBC200B27300 /* AlamofireImage.framework */; };
-		E9CFEA211F44CBCA00B27300 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9CFEA1E1F44CBC200B27300 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9A254FD1F45FDE300E3CC71 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F31F45FDE300E3CC71 /* Alamofire.framework */; };
+		E9A254FE1F45FDE300E3CC71 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F41F45FDE300E3CC71 /* AlamofireImage.framework */; };
+		E9A254FF1F45FDE300E3CC71 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F51F45FDE300E3CC71 /* AlamofireObjectMapper.framework */; };
+		E9A255001F45FDE300E3CC71 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F61F45FDE300E3CC71 /* ObjectMapper.framework */; };
+		E9A255031F45FDE300E3CC71 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F91F45FDE300E3CC71 /* PromiseKit.framework */; };
+		E9A255041F45FDE300E3CC71 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254FA1F45FDE300E3CC71 /* Realm.framework */; };
+		E9A255051F45FDE300E3CC71 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254FB1F45FDE300E3CC71 /* RealmSwift.framework */; };
+		E9A255061F45FDE300E3CC71 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254FC1F45FDE300E3CC71 /* SwiftyJSON.framework */; };
 		E9F16EED1DCFBD8F008DCFCA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,27 +43,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		E96025961F039A1500BCCAAB /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E94079771F3F74CD00A5886D /* Realm.framework in Embed Frameworks */,
-				E94079791F3F74CD00A5886D /* RealmSwift.framework in Embed Frameworks */,
-				E9CFEA211F44CBCA00B27300 /* AlamofireImage.framework in Embed Frameworks */,
-				E96025931F039A1500BCCAAB /* Alamofire.framework in Embed Frameworks */,
-				E94079751F3F74CD00A5886D /* ObjectMapper.framework in Embed Frameworks */,
-				E96025951F039A1500BCCAAB /* SwiftyJSON.framework in Embed Frameworks */,
-				E91BD2911F371814006649B2 /* PromiseKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		0730DE0DC00DB4F1FE9BEB6E /* Pods-HappySwiftInstaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient.release.xcconfig"; sourceTree = "<group>"; };
+		74917BA984D3723B8BD93B58 /* Pods_HappySwiftInstaClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySwiftInstaClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BC9F3BDD1E662B9DFD30CBE /* Pods-HappySwiftInstaClientTests.analyze.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClientTests.analyze.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests.analyze.xcconfig"; sourceTree = "<group>"; };
 		9A2EAC851F45C6DE0005822D /* NetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetService.swift; path = HappySwiftInstaClient/NetService.swift; sourceTree = SOURCE_ROOT; };
 		9A2EAC871F45C6E80005822D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataService.swift; path = HappySwiftInstaClient/DataService.swift; sourceTree = SOURCE_ROOT; };
 		9A2EAC891F45C6F70005822D /* CGPoint+CGPointMakeFix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+CGPointMakeFix.swift"; path = "HappySwiftInstaClient/CGPoint+CGPointMakeFix.swift"; sourceTree = SOURCE_ROOT; };
@@ -78,6 +55,11 @@
 		9A2EAC8E1F45C70A0005822D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HappySwiftInstaClient/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		9A2EAC8F1F45C70A0005822D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = HappySwiftInstaClient/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		9A2EAC901F45C70A0005822D /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = HappySwiftInstaClient/Base.lproj; sourceTree = SOURCE_ROOT; };
+		9BBC7FFADCA8A653228805FC /* Pods-HappySwiftInstaClient.analyze.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClient.analyze.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient.analyze.xcconfig"; sourceTree = "<group>"; };
+		A63F2CAA036AABDF6F549CA1 /* Pods-HappySwiftInstaClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		B2E94D6D65B89C9D8C45E39F /* Pods-HappySwiftInstaClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0BFF0D957D8239B3A098C87 /* Pods_HappySwiftInstaClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySwiftInstaClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4767B9BB7474056B039EB5D /* Pods-HappySwiftInstaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySwiftInstaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient.debug.xcconfig"; sourceTree = "<group>"; };
 		E91BD28E1F3717FC006649B2 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		E940796E1F3F74C600A5886D /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		E940796F1F3F74C600A5886D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -95,6 +77,16 @@
 		E98A50491DCBDAAE0077A5A9 /* HappySwiftInstaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappySwiftInstaClientTests.swift; sourceTree = "<group>"; };
 		E98A504B1DCBDAAE0077A5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9A254F31F45FDE300E3CC71 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/HappySwiftInstaClient-aawdtlxtmmfttlaryzwvbazssalx/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		E9A254F41F45FDE300E3CC71 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "Pods/../build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework"; sourceTree = "<group>"; };
+		E9A254F51F45FDE300E3CC71 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
+		E9A254F61F45FDE300E3CC71 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
+		E9A254F71F45FDE300E3CC71 /* Pods_HappySwiftInstaClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_HappySwiftInstaClient.framework; path = "Pods/../build/Debug-iphoneos/Pods_HappySwiftInstaClient.framework"; sourceTree = "<group>"; };
+		E9A254F81F45FDE300E3CC71 /* Pods_HappySwiftInstaClientTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_HappySwiftInstaClientTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_HappySwiftInstaClientTests.framework"; sourceTree = "<group>"; };
+		E9A254F91F45FDE300E3CC71 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/HappySwiftInstaClient-aawdtlxtmmfttlaryzwvbazssalx/Build/Products/Debug-iphonesimulator/PromiseKit/PromiseKit.framework"; sourceTree = "<group>"; };
+		E9A254FA1F45FDE300E3CC71 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		E9A254FB1F45FDE300E3CC71 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		E9A254FC1F45FDE300E3CC71 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/HappySwiftInstaClient-aawdtlxtmmfttlaryzwvbazssalx/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		E9CFEA1E1F44CBC200B27300 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,14 +96,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E94079761F3F74CD00A5886D /* Realm.framework in Frameworks */,
-				E91BD28F1F3717FC006649B2 /* PromiseKit.framework in Frameworks */,
-				E94079711F3F74C600A5886D /* ObjectMapper.framework in Frameworks */,
-				E9CFEA1F1F44CBC200B27300 /* AlamofireImage.framework in Frameworks */,
-				E94079731F3F74C600A5886D /* RealmSwift.framework in Frameworks */,
-				E96025921F039A1500BCCAAB /* Alamofire.framework in Frameworks */,
-				E94079741F3F74CD00A5886D /* ObjectMapper.framework in Frameworks */,
-				E96025941F039A1500BCCAAB /* SwiftyJSON.framework in Frameworks */,
+				E9A254FD1F45FDE300E3CC71 /* Alamofire.framework in Frameworks */,
+				E9A254FE1F45FDE300E3CC71 /* AlamofireImage.framework in Frameworks */,
+				E9A254FF1F45FDE300E3CC71 /* AlamofireObjectMapper.framework in Frameworks */,
+				E9A255001F45FDE300E3CC71 /* ObjectMapper.framework in Frameworks */,
+				E9A255031F45FDE300E3CC71 /* PromiseKit.framework in Frameworks */,
+				E9A255041F45FDE300E3CC71 /* Realm.framework in Frameworks */,
+				E9A255051F45FDE300E3CC71 /* RealmSwift.framework in Frameworks */,
+				E9A255061F45FDE300E3CC71 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,15 +111,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3A10B3D5184EA6A9D027C5 /* Pods_HappySwiftInstaClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		279A408821505212D736D5CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4767B9BB7474056B039EB5D /* Pods-HappySwiftInstaClient.debug.xcconfig */,
+				9BBC7FFADCA8A653228805FC /* Pods-HappySwiftInstaClient.analyze.xcconfig */,
+				0730DE0DC00DB4F1FE9BEB6E /* Pods-HappySwiftInstaClient.release.xcconfig */,
+				B2E94D6D65B89C9D8C45E39F /* Pods-HappySwiftInstaClientTests.debug.xcconfig */,
+				8BC9F3BDD1E662B9DFD30CBE /* Pods-HappySwiftInstaClientTests.analyze.xcconfig */,
+				A63F2CAA036AABDF6F549CA1 /* Pods-HappySwiftInstaClientTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E96025781F03945800BCCAAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9A254F31F45FDE300E3CC71 /* Alamofire.framework */,
+				E9A254F41F45FDE300E3CC71 /* AlamofireImage.framework */,
+				E9A254F51F45FDE300E3CC71 /* AlamofireObjectMapper.framework */,
+				E9A254F61F45FDE300E3CC71 /* ObjectMapper.framework */,
+				E9A254F71F45FDE300E3CC71 /* Pods_HappySwiftInstaClient.framework */,
+				E9A254F81F45FDE300E3CC71 /* Pods_HappySwiftInstaClientTests.framework */,
+				E9A254F91F45FDE300E3CC71 /* PromiseKit.framework */,
+				E9A254FA1F45FDE300E3CC71 /* Realm.framework */,
+				E9A254FB1F45FDE300E3CC71 /* RealmSwift.framework */,
+				E9A254FC1F45FDE300E3CC71 /* SwiftyJSON.framework */,
 				E9CFEA1E1F44CBC200B27300 /* AlamofireImage.framework */,
 				E940796E1F3F74C600A5886D /* ObjectMapper.framework */,
 				E940796F1F3F74C600A5886D /* Realm.framework */,
@@ -136,6 +152,8 @@
 				E960257D1F03993100BCCAAB /* Kingfisher.framework */,
 				E96025791F03945900BCCAAB /* Alamofire.framework */,
 				E960257A1F03945900BCCAAB /* SwiftyJSON.framework */,
+				74917BA984D3723B8BD93B58 /* Pods_HappySwiftInstaClient.framework */,
+				E0BFF0D957D8239B3A098C87 /* Pods_HappySwiftInstaClientTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,6 +190,7 @@
 				E98A50481DCBDAAE0077A5A9 /* HappySwiftInstaClientTests */,
 				E98A50321DCBDAAE0077A5A9 /* Products */,
 				E96025781F03945800BCCAAB /* Frameworks */,
+				279A408821505212D736D5CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,11 +264,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E98A504E1DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClient" */;
 			buildPhases = (
+				92C76305BE10E43B8A611516 /* [CP] Check Pods Manifest.lock */,
 				E98A502D1DCBDAAD0077A5A9 /* Sources */,
 				E98A502E1DCBDAAD0077A5A9 /* Frameworks */,
 				E98A502F1DCBDAAD0077A5A9 /* Resources */,
-				E96025961F039A1500BCCAAB /* Embed Frameworks */,
 				E92715CC1F2FB0E400FF20B9 /* ShellScript */,
+				4DB3C1803369B33F9EC75C93 /* [CP] Embed Pods Frameworks */,
+				7B497D0E4B30707C726D2321 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E98A50511DCBDAAE0077A5A9 /* Build configuration list for PBXNativeTarget "HappySwiftInstaClientTests" */;
 			buildPhases = (
+				0B32AB2F5966ED7ACB31974E /* [CP] Check Pods Manifest.lock */,
 				E98A50411DCBDAAE0077A5A9 /* Sources */,
 				E98A50421DCBDAAE0077A5A9 /* Frameworks */,
 				E98A50431DCBDAAE0077A5A9 /* Resources */,
+				7E5582CACCC29FA5C90B4D5D /* [CP] Embed Pods Frameworks */,
+				9B3DA018B30B58366853E66C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,6 +364,96 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B32AB2F5966ED7ACB31974E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DB3C1803369B33F9EC75C93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B497D0E4B30707C726D2321 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClient/Pods-HappySwiftInstaClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E5582CACCC29FA5C90B4D5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92C76305BE10E43B8A611516 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B3DA018B30B58366853E66C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappySwiftInstaClientTests/Pods-HappySwiftInstaClientTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E92715CC1F2FB0E400FF20B9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -465,11 +579,18 @@
 		};
 		E974CE151F310EDE00EAEB42 /* Analyze */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BBC7FFADCA8A653228805FC /* Pods-HappySwiftInstaClient.analyze.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireImage",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireObjectMapper",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ObjectMapper",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
 				);
 				INFOPLIST_FILE = HappySwiftInstaClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -482,6 +603,7 @@
 		};
 		E974CE161F310EDE00EAEB42 /* Analyze */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC9F3BDD1E662B9DFD30CBE /* Pods-HappySwiftInstaClientTests.analyze.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HappySwiftInstaClientTests/Info.plist;
@@ -588,11 +710,18 @@
 		};
 		E98A504F1DCBDAAE0077A5A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4767B9BB7474056B039EB5D /* Pods-HappySwiftInstaClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireImage",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireObjectMapper",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ObjectMapper",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
 				);
 				INFOPLIST_FILE = HappySwiftInstaClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -605,11 +734,18 @@
 		};
 		E98A50501DCBDAAE0077A5A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0730DE0DC00DB4F1FE9BEB6E /* Pods-HappySwiftInstaClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireImage",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AlamofireObjectMapper",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ObjectMapper",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
 				);
 				INFOPLIST_FILE = HappySwiftInstaClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -622,6 +758,7 @@
 		};
 		E98A50521DCBDAAE0077A5A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2E94D6D65B89C9D8C45E39F /* Pods-HappySwiftInstaClientTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HappySwiftInstaClientTests/Info.plist;
@@ -635,6 +772,7 @@
 		};
 		E98A50531DCBDAAE0077A5A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63F2CAA036AABDF6F549CA1 /* Pods-HappySwiftInstaClientTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HappySwiftInstaClientTests/Info.plist;

@@ -19,12 +19,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewWithImages.allowsSelection = true
-        DataService.shared.getMediaAndSetVarLocalMedia() // get local Realm data
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadUsersPics()
+
     }
 
     func loadUsersPics() {
@@ -33,6 +33,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }.then { result in
                 // Промисом маппится в реалм
                 DataService.shared.writeJsonToRealm(jsonArray: result)
+            }.then {_ in 
+                DataService.shared.getMediaAndSetVarLocalMedia() // get local Realm data
             }.always {
                  self.viewWithImages.reloadData()
             }.catch { e in
