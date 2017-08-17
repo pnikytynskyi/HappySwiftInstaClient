@@ -24,10 +24,8 @@
 		E99C708D1DCF318B001C751D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C708C1DCF318B001C751D /* ImageCollectionViewCell.swift */; };
 		E9A254FD1F45FDE300E3CC71 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F31F45FDE300E3CC71 /* Alamofire.framework */; };
 		E9A254FE1F45FDE300E3CC71 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F41F45FDE300E3CC71 /* AlamofireImage.framework */; };
-		E9A254FF1F45FDE300E3CC71 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F51F45FDE300E3CC71 /* AlamofireObjectMapper.framework */; };
 		E9A255001F45FDE300E3CC71 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F61F45FDE300E3CC71 /* ObjectMapper.framework */; };
 		E9A255031F45FDE300E3CC71 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254F91F45FDE300E3CC71 /* PromiseKit.framework */; };
-		E9A255041F45FDE300E3CC71 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254FA1F45FDE300E3CC71 /* Realm.framework */; };
 		E9A255051F45FDE300E3CC71 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254FB1F45FDE300E3CC71 /* RealmSwift.framework */; };
 		E9A255061F45FDE300E3CC71 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A254FC1F45FDE300E3CC71 /* SwiftyJSON.framework */; };
 		E9F16EED1DCFBD8F008DCFCA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F16EEC1DCFBD8F008DCFCA /* ModalViewController.swift */; };
@@ -98,10 +96,8 @@
 			files = (
 				E9A254FD1F45FDE300E3CC71 /* Alamofire.framework in Frameworks */,
 				E9A254FE1F45FDE300E3CC71 /* AlamofireImage.framework in Frameworks */,
-				E9A254FF1F45FDE300E3CC71 /* AlamofireObjectMapper.framework in Frameworks */,
 				E9A255001F45FDE300E3CC71 /* ObjectMapper.framework in Frameworks */,
 				E9A255031F45FDE300E3CC71 /* PromiseKit.framework in Frameworks */,
-				E9A255041F45FDE300E3CC71 /* Realm.framework in Frameworks */,
 				E9A255051F45FDE300E3CC71 /* RealmSwift.framework in Frameworks */,
 				E9A255061F45FDE300E3CC71 /* SwiftyJSON.framework in Frameworks */,
 			);

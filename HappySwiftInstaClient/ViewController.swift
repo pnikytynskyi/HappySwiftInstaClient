@@ -6,8 +6,6 @@
 //  Copyright © 2016 pavel. All rights reserved.
 //
 
-/// Please add all frameworks as embeded binaries in the General menu
-
 import UIKit
 import SwiftyJSON
 import Alamofire
